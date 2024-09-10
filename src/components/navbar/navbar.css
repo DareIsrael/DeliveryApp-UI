@@ -16,7 +16,10 @@
     color: #4B0082;
 }
 .navbar .logo {
-    width: 150px;
+    width: 140px;
+    margin-left: 30px;
+   
+    
 }
 
 .navbar-menu {

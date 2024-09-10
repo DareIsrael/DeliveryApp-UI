@@ -78,7 +78,9 @@
     
     border: none;
 }
-
+.footer .logo {
+    width: 220px;
+}
 /* .footer-copyright{
     margin-left: 600px;
 } */

@@ -21,7 +21,7 @@ const Navbar = ({setShowLogin}) => {
 
   return (
     <div className='navbar'>
-   <Link to='/'  > <img src={assets.logo} /> </Link>
+   <Link to='/'  > <img className='logo' src={assets.logo} /> </Link>
     <ul className='navbar-menu'>
         <Link to='/' onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>Home</Link>
         <a href='#explore-menu' onClick={()=>setMenu("menu")} className={menu==="menu"? "active":""}>Product</a>

@@ -8,7 +8,7 @@ const Footer = () => {
     <div className='footer' id='footer'>
        <div className='footer-content'>
           <div className='footer-content-left'>
-           <img  src={assets.logo}   />
+           <img  className='logo' src={assets.logo}   />
            <div className='about'  id='about-us'>
       <h2>About Us</h2>
       <p>Welcome to [Your Website Name], your trusted partner for top-quality home
