@@ -1,0 +1,17 @@
+.about {
+    
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.6;
+  font-family: 'Arial', sans-serif
+}
+
+.about h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.about p {
+    margin-top: 40px;
+}

@@ -1,0 +1,166 @@
+.login-popup {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    display: grid;
+  }
+  
+  .login-popup-container {
+    place-self: center;
+    width: max(23vw, 330px);
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+  }
+  
+  .login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+  }
+  
+  .login-popup-title img {
+    width: 16px;
+    cursor: pointer;
+  }
+  
+  .login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .login-popup-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: tomato;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+  }
+  
+  .login-popup-condition input {
+    margin-top: 5px;
+  }
+  
+  .login-popup p span {
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+    border: 1px solid red;
+    background-color: rgb(244, 182, 182);
+    padding: 10px;
+    border-radius: 4px;
+    animation: shake 0.5s ease-in-out;
+  }
+
+  /* Wrapper for the input and eye icon */
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* The input field itself */
+  .password-input-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* Make space for the eye icon */
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Eye icon positioning inside the input field */
+  .password-input-wrapper .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #808080;
+  }
+  
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* Media queries */
+  
+  /* Tablet devices */
+  @media (max-width: 1050px) {
+    .login-popup-container {
+      width: 70vw; /* Adjust container width for tablets */
+      padding: 30px; /* Adjust padding for tablets */
+    }
+  
+    .login-popup-title img {
+      width: 20px; /* Smaller close icon for tablets */
+    }
+  
+    .login-popup-inputs input {
+      padding: 20px;
+      font-size: 18px; /* Adjusted for better readability */
+    }
+  
+    .login-popup-container button {
+      font-size: 18px;
+    }
+  }
+  
+  /* Mobile devices */
+  @media (max-width: 900px) {
+    .login-popup-container {
+      width: 90vw; /* Adjust container width for mobile phones */
+      padding: 15px;
+      font-size: 12px;
+    }
+  
+    .login-popup-title img {
+      width: 12px;
+    }
+  
+    .login-popup-container button {
+      font-size: 14px;
+    }
+  
+    .login-popup-condition {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+}
