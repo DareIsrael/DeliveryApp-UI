@@ -30,15 +30,21 @@ const Navbar = ({setShowLogin}) => {
      
     </ul>
     <div className='navbar-right'>
-     <Link to="/" ><img className='hidden_home' src={assets.search_icon}/> </Link> 
+    <div  className='hidden_home' >
+    <Link to="/" ><img  src={assets.search_icon}/> </Link>
+    <p className='nav_p' >Home</p>
+    </div>
+      
     <div className='navbar-search-icon'>
        <Link to='/cart' ><img src={assets.cart} /> </Link>
 
         <div className={getTotalCartAmount()===0?"":"dot"}></div>
+        <p className='nav_p' >Cart</p>
     </div>
     {!token?  <button onClick={()=> setShowLogin(true)}>signin</button>
      : <div className='navbar-profile'>
       <img src={assets.profile_icon} />
+      <p className='nav_p' >Account</p>
       <ul className='nav-profile-dropdown'>
       <li onClick={()=>navigate('/myorders')} ><img src={assets.bag_icon} /> <p>Orders</p> </li>
       <hr />

@@ -1,0 +1,6 @@
+@media (max-width: 1050px) {
+    #chat-application-iframe {
+        width: 500px !important;
+        height: 300px;
+    }
+}

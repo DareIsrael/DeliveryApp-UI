@@ -10,12 +10,13 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
-    const url = "https://deliveryapp-api-gyft.onrender.com" 
+    const url =  "https://deliveryapp-api-gyft.onrender.com"
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([])
     const [userId, setUserId] = useState(""); 
 
     // "http://localhost:4000"
+    // "https://deliveryapp-api-gyft.onrender.com"
 
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
