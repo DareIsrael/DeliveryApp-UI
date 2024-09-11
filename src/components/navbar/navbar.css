@@ -1,9 +1,10 @@
 .navbar {
     
-    padding: 0 20px;
+    padding: 0 40px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  
     
 
     
@@ -40,7 +41,7 @@
   background: transparent;
   font-size: 16px;
   color: #49557e;
-  border: 1px solid tomato;
+  border: 1px solid#4B0082;
   padding: 10px 30px;
   border-radius: 50px;
   cursor: pointer;
@@ -112,9 +113,6 @@
 }
 
 
-@media (max-width:1050px) {
-    
-}
 
 @media (max-width:1050px) {
     .navbar {
@@ -124,7 +122,7 @@
         top: 0;
         background-color: white;
         box-shadow: 2px 5px 2px #49557e;
-        
+       
         z-index: 1;
         border-bottom-left-radius: 60px;
         border-bottom-right-radius: 60px;
@@ -151,13 +149,14 @@
     .navbar-right {
         gap: 30px;
         margin-right: 50px;
+        margin-top: 12px;
     }
     .navbar-right img {
         width: 75px;
     }
     .navbar-right button {
-        padding: 30px 40px;
-        font-size: 35px;
+        padding: 25px 30px;
+        font-size: 45px;
     }
     .navbar-profile img{
         width: 90px;

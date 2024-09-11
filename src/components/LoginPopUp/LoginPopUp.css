@@ -51,7 +51,7 @@
     padding: 10px;
     border-radius: 4px;
     color: white;
-    background-color: tomato;
+    background-color: #4B0082;
     font-size: 15px;
     cursor: pointer;
   }
@@ -68,7 +68,7 @@
   }
   
   .login-popup p span {
-    color: tomato;
+    color:#4B0082;
     font-weight: 500;
     cursor: pointer;
   }
@@ -129,16 +129,19 @@
     }
   
     .login-popup-title img {
-      width: 20px; /* Smaller close icon for tablets */
+      width: 40px; /* Smaller close icon for tablets */
     }
   
     .login-popup-inputs input {
       padding: 20px;
-      font-size: 18px; /* Adjusted for better readability */
+      font-size: 38px; /* Adjusted for better readability */
     }
   
     .login-popup-container button {
-      font-size: 18px;
+      font-size: 30px;
+    }
+    .login-popup p {
+      font-size: 30px;
     }
   }
   

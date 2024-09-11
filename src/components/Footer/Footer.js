@@ -11,7 +11,7 @@ const Footer = () => {
            <img  className='logo' src={assets.logo}   />
            <div className='about'  id='about-us'>
       <h2>About Us</h2>
-      <p>Welcome to [Your Website Name], your trusted partner for top-quality home
+      <p>Welcome to Obitek Electronic Store, your trusted partner for top-quality home
        appliances and entertainment solutions. Our mission is to bring innovation,
         style, and convenience to every home, offering a carefully curated selection 
         of Smart TVs, TV consoles, sound systems, cookers, fans, and other essential household appliances.

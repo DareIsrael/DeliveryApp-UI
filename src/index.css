@@ -35,3 +35,12 @@ a{
   }
 }
 
+@media (max-width:1050px) {
+  #chat-application-iframe {
+    width: 200px;
+    height: 200px;
+  }
+  .smartsupp-chat-button {
+    transform: scale(4.5); /* Scale the button if needed */
+  }
+}

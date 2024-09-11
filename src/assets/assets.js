@@ -5,7 +5,7 @@ import cart from './cart.png'
 import television from './television.jpg'
 import sound from './sound.jpg'
 import cooker from './cooker.jpg'
-import fan from './fan.jpg'
+import fans from './fan.jpg'
 import freezer from './freezer.jpg'
 import table from './table.jpg'
 import washing from './washing.jpg'
@@ -98,7 +98,7 @@ export const menu_list = [
     },
     {
         menu_name: "fans",
-        menu_image: fan
+        menu_image: fans
 
     },
     {

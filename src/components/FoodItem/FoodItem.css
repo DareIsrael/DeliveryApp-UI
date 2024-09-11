@@ -97,6 +97,10 @@
         max-height: 200px;
         object-fit: cover;
      }
+
+     .add {
+        width: 60px !important;
+     }
      .custom-modal-img {
         max-width: 90vw; /* Adjust size for screens up to 1050px */
       }
@@ -105,6 +109,9 @@
         background-color: tomato !important;
         font-size: 30px !important;
       }
+      .food-item-counter img {
+          width: 60px !important;
+      } 
       
        
 }

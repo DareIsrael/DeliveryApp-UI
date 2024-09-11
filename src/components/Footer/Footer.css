@@ -102,6 +102,9 @@
       
         min-height: calc(100vh - [footer-height]);
     }
+    .about p {
+        font-size: 31px;
+    }
     
     .footer-contact {
         /* justify-content: space-around; */
