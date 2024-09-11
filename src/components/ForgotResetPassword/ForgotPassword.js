@@ -1,13 +1,15 @@
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import './ForgotPassword.css';
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
+import { StoreContext } from '../../context/StoreContext';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const { url } = useContext(StoreContext);
 
   const onChangeHandler = (e) => {
     setEmail(e.target.value);
@@ -15,9 +17,9 @@ const ForgotPassword = () => {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-
+   
     try {
-      const response = await axios.post('http://localhost:4000/api/user/forgotpassword', { email });
+      const response = await axios.post(`${url}/api/user/forgotpassword`, { email });
 
       if (response.data.success) {
         setMessage('If an account with that email exists, a password reset link has been sent to the email.');

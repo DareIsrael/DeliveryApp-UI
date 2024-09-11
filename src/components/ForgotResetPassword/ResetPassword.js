@@ -1,10 +1,11 @@
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import './ForgotPassword.css'; // Ensure this path is correct
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { assets } from '../../assets/assets';
+import { StoreContext } from '../../context/StoreContext';
 
 const ResetPassword = ({ setShowResetPassword, setShowLogin }) => {
   const { id, token } = useParams();
@@ -13,6 +14,7 @@ const ResetPassword = ({ setShowResetPassword, setShowLogin }) => {
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [message, setMessage] = useState('');
   const [success, setSuccess] = useState(false);
+  const { url } = useContext(StoreContext);
 
   // Function to handle the form submission
   const handleSubmit = async (e) => {
@@ -23,9 +25,9 @@ const ResetPassword = ({ setShowResetPassword, setShowLogin }) => {
       setMessage('Passwords do not match!');
       return;
     }
-
+   
     try {
-      const response = await axios.post(`http://localhost:4000/api/user/resetpassword/${id}/${token}`, { password });
+      const response = await axios.post(`${url}/api/user/resetpassword/${id}/${token}`, { password });
 
       if (response.data.success) {
         setMessage('Password has been reset successfully.');
