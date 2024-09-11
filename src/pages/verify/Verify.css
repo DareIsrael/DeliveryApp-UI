@@ -46,3 +46,16 @@
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 1050px) {
+    .verify {
+        margin-top: 100px;
+    }
+    .verify .spinner {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .verify-message {
+        font-size: 35px !important;
+    }
+}

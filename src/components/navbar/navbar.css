@@ -139,6 +139,7 @@
         
     }
     .hidden_home img {
+        width: 90px !important;
        padding-left: 10px;
     }
     .nav_p {
@@ -147,7 +148,8 @@
         right: 0;
         left: 18px;
         margin-bottom: 0;
-        font-size: 22px;
+        font-size: 26px !important;
+        font-family: Verdana, sans-serif;
     }
     .navbar .logo {
         width: 140px;
