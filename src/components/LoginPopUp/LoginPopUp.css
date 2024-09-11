@@ -143,6 +143,10 @@
     .login-popup p {
       font-size: 30px;
     }
+    .eye-icon {
+      font-size: 35px !important;
+      /* width: 100px !important; */
+    }
   }
   
   /* Mobile devices */
