@@ -201,7 +201,7 @@ Explore Menu Base Styles */
   
   @media (max-width: 1050px) {
     .explore-menu p {
-        font-size: 26px;
+        font-size: 30px;
     }
     .explore-menu-list-item img {
         max-width: 150px;
