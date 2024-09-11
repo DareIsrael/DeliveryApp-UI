@@ -61,7 +61,7 @@ const Verify = () => {
   const verifyPayment = async () => {
     try {
       const response = await axios.post(`${url}/api/order/verify`, { success, orderId });
-      
+     
       console.log('Response from backend:', response.data); // Add this line for debugging
 
       if (response.data.success) {
