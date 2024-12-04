@@ -65,7 +65,7 @@ const Verify = () => {
       console.log('Response from backend:', response.data); // Add this line for debugging
 
       if (response.data.success) {
-        setMessage("Payment successful! Kinly check your mail for the receipt. Redirecting...");
+        setMessage("Payment successful! Kindly check your mail for the receipt. Redirecting...");
         setTimeout(() => navigate("/myorders"), 2000); // Redirect after 2 seconds
       } else {
         setMessage("Payment failed. Redirecting to home...");

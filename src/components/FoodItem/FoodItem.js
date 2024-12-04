@@ -196,12 +196,9 @@ const FoodItem = ({ id, name, price, description, image }) => {
             onClick={handleShow} // Trigger modal on image click
           />
           {!cartItems[id] ? (
-            <img 
-              className='add' 
-              onClick={() => addToCart(id)}  // Pass the id to addToCart
-              src={assets.add_icon_white} 
-              alt="Add to cart" 
-            />
+              <button className='add' 
+              onClick={() => addToCart(id)}  >Add to cart</button> 
+              
           ) : (
             <div className='food-item-counter'>
            
@@ -227,8 +224,8 @@ const FoodItem = ({ id, name, price, description, image }) => {
             <p>{name}</p>
             <img className='rating-stars' src={assets.rating_stars} alt="Rating" />
           </div>
-          <p className='food-item-desc'>{description}</p>
-          <p className='food-item-price'>${price}</p>
+          {/* <p className='food-item-desc'>{description}</p> */}
+          <p className='food-item-price'># {price}</p>
         </div>
       </div>
 
@@ -244,11 +241,16 @@ const FoodItem = ({ id, name, price, description, image }) => {
             </div>
             <div className="modal-body">
               <img className="img-fluid custom-modal-img" src={image} alt={name} />  {/* Cloudinary URL */}
+             
               <p>{name}</p>
-              <p className='food-item-price'>${price}</p>
+              <p className='food-item-price'>#{price}</p>
             </div>
+            <p>{description}</p>
+            
+
             <div className="modal-footer">
-              <p>{description}</p>
+             
+        
               <button type="button" className="btn btn-secondary" onClick={handleClose}>Close</button>
             </div>
           </div>

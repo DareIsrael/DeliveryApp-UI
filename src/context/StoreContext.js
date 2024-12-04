@@ -10,7 +10,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
-    const url =  "https://deliveryapp-api-gyft.onrender.com"
+    const url = process.env.REACT_APP_BACKEND_BASEURL;
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([])
     const [userId, setUserId] = useState(""); 

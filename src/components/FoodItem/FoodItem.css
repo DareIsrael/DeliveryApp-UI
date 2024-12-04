@@ -44,7 +44,7 @@
     font-size: 15px;
 }
 .food-item-price {
-  color: black;  
+  color: red;  
   font-size: 18px;
   font-weight: 500;
   margin: 10px 0px;
@@ -54,14 +54,33 @@
     position: relative;
 }
 .food-item-img-container .add {
-    width: 35px;
+   
     position: absolute;
     bottom: 15px;
     right: 15px;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 6px;
     color: white;
+    background-color: #4B0082;
+    
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: silver;
 }
+.food-item-img-container .add:hover {
+    background-color: black;
+    transition: 1.5s;
+
+}
+
+
+/* .food-item-img-container button {
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+} */
 .food-item-counter {
     position: absolute;
     bottom: 10px;
@@ -86,38 +105,57 @@
     margin-right: 310px !important;
   }
    
+  .btn-secondary {
+    background-color: #4B0082 !important;
+ }
+  
+ 
 
-@media (max-width: 1050px) {
-    
-     .food-item-info p{
-     font-size: 25px;
-     }
-     .food-item-image {
+  /* Adjustments for medium screens */
+  @media (max-width: 1050px) {
+    .food-item-info p {
+        font-size: 25px;
+    }
+
+    .food-item-image {
         max-width: 100%;
         max-height: 200px;
-        object-fit: cover;
-     }
+    }
 
-     .add {
-        width: 60px !important;
-     }
-     .custom-modal-img {
-        max-width: 90vw; /* Adjust size for screens up to 1050px */
-      }
-      .btn-secondary {
+    .add {
+        width: 120px !important;
+        height: 60px !important;
+        font-size: 22px !important;
+    }
+
+    .custom-modal-img {
+        max-width: 90vw;
+    }
+
+    .btn-secondary {
         padding: 20px 40px !important;
         background-color: tomato !important;
         font-size: 30px !important;
-      }
-      .food-item-counter img {
-          width: 60px !important;
-      } 
-      
-       
-}
-/* Default styles for the modal image */
+    }
 
-  
-  
-  
+    .food-item-counter img {
+        width: 65px !important;
+    }
+    
+    .modal-content {
+        margin-top: 200px;
+    }
+    
+    .modal-body p {
+        font-size: 30px;
+       
+    }
+    .modal-title {
+        font-size: 35px;
+    }
+    .close {
+        font-size: 40px;
+    }
+}
+
   

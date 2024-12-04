@@ -207,6 +207,11 @@ Explore Menu Base Styles */
         max-width: 150px;
         border-radius: 20px;
       }
+
+      .explore-menu-text {
+        max-width: 90%;
+       
+      }
       
   }
 
