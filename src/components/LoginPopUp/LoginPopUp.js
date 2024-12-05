@@ -7,7 +7,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons
 
-const LoginPopUp = ({ setShowLogin }) => {
+const LoginPopUp = ({ setShowLogin, setSuccessLogin }) => {
   const { url, setToken } = useContext(StoreContext);
   const [error, setError] = useState();
   const [currState, setCurrState] = useState('Login');
@@ -21,6 +21,7 @@ const LoginPopUp = ({ setShowLogin }) => {
 
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
   const [showConfirmPassword, setShowConfirmPassword] = useState(false); // Toggle for confirm password
+  
 
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
@@ -46,7 +47,16 @@ const LoginPopUp = ({ setShowLogin }) => {
       if (response.data.success) {
         setToken(response.data.token);
         localStorage.setItem("token", response.data.token);
-        setShowLogin(false);
+        setShowLogin(false)
+
+      // Set successLogin to true for 3 seconds
+        setTimeout(() => {
+        setSuccessLogin(true);
+        setTimeout(() => {
+        setSuccessLogin(false);
+       }, 2000); // After 3 seconds, set it back to false
+     }, 0);
+
       } else {
         setError(response.data.message || "An error occurred. Please try again.");
       }
@@ -121,6 +131,7 @@ const LoginPopUp = ({ setShowLogin }) => {
         )}
         
         <div>{error && <p className="error-message">{error}</p>}</div>
+        
       </form>
     </div>
   );

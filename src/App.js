@@ -14,18 +14,23 @@ import ResetPassword from './components/ForgotResetPassword/ResetPassword'
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import About from './components/about/About'
+import SuccessLogin from './components/SuccessLogin/SuccessLogin'
 
 const App = () => {
   
   const [showLogin, setShowLogin] = useState(false)
   // const [showForgotPassword, setShowForgotPassword] = useState(false);
   const [showResetPassword, setShowResetPassword] = useState(true)
+  const [successLogin, setSuccessLogin] = useState(false)
 
   return (
      <>
-   {showLogin?<LoginPopUp setShowLogin={setShowLogin} /> : <></>}
+   {/* {showLogin?<LoginPopUp setShowLogin={setShowLogin} /> : <></>} */}
+   {showLogin? <LoginPopUp setShowLogin={setShowLogin} setSuccessLogin={setSuccessLogin} /> : <></>}
+
    {/* {showForgotPassword ? <ForgotPassword setShowForgotPassword={setShowForgotPassword} /> : <></>} */}
-   {setShowResetPassword? <setShowResetPassword setShowResetPassword = {setShowResetPassword} /> : <></>}
+   {/* {setShowResetPassword? <setShowResetPassword setShowResetPassword = {setShowResetPassword} /> : <></>} */}
+   {successLogin ? <SuccessLogin /> : <></>}
 
      <div className='app'>
 
@@ -45,6 +50,7 @@ const App = () => {
    
    </div>
    <Footer />
+   
      
      </>
     
