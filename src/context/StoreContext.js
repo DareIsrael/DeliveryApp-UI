@@ -15,8 +15,11 @@ const StoreContextProvider = (props) => {
     const [food_list, setFoodList] = useState([])
     const [userId, setUserId] = useState(""); 
 
+   
+    console.log(process.env.REACT_APP_BACKEND_BASEURL)
+    
     // "http://localhost:4000"
-    // "https://deliveryapp-api-gyft.onrender.com"
+   
 
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
