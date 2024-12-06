@@ -144,10 +144,11 @@
     }
     .nav_p {
         position: absolute;
-        bottom: 0;
+        bottom: -13px;
         right: 0;
         left: 18px;
         margin-bottom: 0;
+        
         font-size: 26px !important;
         font-family: Verdana, sans-serif;
     }

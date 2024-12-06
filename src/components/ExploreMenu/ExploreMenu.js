@@ -44,7 +44,8 @@ const ExploreMenu = ({ category, setCategory }) => {
       <p className="explore-menu-text">
         Browse our collections and find the perfect gadget for you. Whether you're looking to enhance your home or stay on top of the latest tech trends, we got you covered.
       </p>
-
+      <div className='sorts'> <h1>Sorts by</h1> </div>
+     
       <div className="explore-menu-list">
         {/* Duplicate the list to create a seamless scroll */}
         <div className="explore-menu-list-wrapper">

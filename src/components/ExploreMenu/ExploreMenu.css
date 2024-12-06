@@ -176,6 +176,25 @@ Explore Menu Base Styles */
     font-size: 14px;
     
   }
+  .sorts {
+    background-color: silver;
+    align-items: center;
+    margin: auto;
+    width: 75%;
+    align-items: center;
+    padding: 10px 10px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  .sorts h1{
+    color: #4B0082;
+    margin: 0 400px;
+    align-items: center;
+    justify-items: center;
+    font-size: 22px;
+    font-weight: 600;
+  }
   
   /* Animation for infinite horizontal scroll */
   @keyframes scroll {
@@ -211,6 +230,15 @@ Explore Menu Base Styles */
       .explore-menu-text {
         max-width: 90%;
        
+      }
+      .sorts {
+        margin-bottom: 20px;
+        margin-top: 25px;
+        width: 80%;
+        
+      }
+      .sorts h1 {
+        margin: 0 300px;
       }
       
   }

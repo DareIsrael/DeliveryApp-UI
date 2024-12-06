@@ -14,13 +14,12 @@ const Cart = () => {
     
     const check_Out = () => {
         if (!token) {
-            setCheckout("Kindly login");
-        } else if (token) {
-           setCheckout("successfully login")
-        } else {
+            setCheckout("Kindly signin");
 
+        } else {
             navigate('/order');
         }
+       
 
     };
 
