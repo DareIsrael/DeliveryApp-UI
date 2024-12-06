@@ -51,10 +51,25 @@ const StoreContextProvider = (props) => {
         return totalAmount;
     }
 
-    const fetchFoodList = async () => {
-        const response = await axios.get(url+"/api/food/list")
-        setFoodList(response.data.data)
-    }
+    // const fetchFoodList = async () => {
+    //     const response = await axios.get(url+"/api/food/list")
+    //     setFoodList(response.data.data)
+    // }
+
+    const fetchFoodList = async (searchQuery = "", category = "") => {
+        try {
+            const response = await axios.get(url + `/api/food/list`, {
+                params: {
+                    name: searchQuery,
+                    category: category !== "All" ? category : undefined, // Avoid sending "All" as a category filter
+                },
+            });
+            setFoodList(response.data.data);
+        } catch (error) {
+            console.error("Error fetching food list:", error);
+        }
+    };
+    
 
     const loadCartData = async (token) => {
         const response = await axios.post(url+"/api/cart/get",{},{headers:{token}})
@@ -76,7 +91,7 @@ const StoreContextProvider = (props) => {
 
     useEffect(() => {
         async function loadData() {
-            await fetchFoodList();
+            // await fetchFoodList();
             if (localStorage.getItem("token")) {
                 const storedToken = localStorage.getItem("token");
                 setToken(storedToken);
@@ -94,6 +109,7 @@ const StoreContextProvider = (props) => {
 
     const contextValue = {
         food_list,
+        fetchFoodList,
         cartItems,
         setCartItems,
         addToCart,

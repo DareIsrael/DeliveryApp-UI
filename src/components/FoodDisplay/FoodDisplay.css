@@ -21,6 +21,28 @@
     
 }
 
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60%;
+    margin-right: 10px;
+    /* border-color: purple; */
+}
+
+
+
+
+
+
 @media (max-width: 1050px) {
     .food-display {
         margin-bottom: 0;
@@ -32,5 +54,12 @@
     .food-display-list {
         font-size: 25px;
      
+    }
+
+    .search-bar input {
+        padding: 20px 5px;
+        font-size: 28px;
+        border-radius: 30px;
+        background-color: white;
     }
 }

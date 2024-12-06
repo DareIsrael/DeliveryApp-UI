@@ -36,6 +36,7 @@
 .food-item-name-rating p {
     font-size: 15px;
     font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .food-item-name-rating img {
     width: 60px;
@@ -45,10 +46,11 @@
     font-size: 15px;
 }
 .food-item-price {
-  color: red;  
+  color: black;  
   font-size: 18px;
   font-weight: 500;
   margin: 10px 0px;
+  font-family: poppin;
 }
 
 .food-item-img-container {
@@ -127,6 +129,7 @@
         width: 120px !important;
         height: 60px !important;
         font-size: 22px !important;
+        margin-bottom: -27px !important;
     }
 
     .custom-modal-img {
