@@ -1,6 +1,6 @@
 import React from 'react'
 import search_icon from './search_icon.png'
-import logo from './logo.png'
+import logo from './logo.jpeg'
 import cart from './cart.png'
 import television from './television.jpg'
 import sound from './sound.jpg'
@@ -82,52 +82,52 @@ export const assets = {
 export const menu_list = [
 
     {
-        menu_name: "tvs",
+        menu_name: "PlasmaTV",
         menu_image: television
 
     },
     {
-        menu_name: "sounds",
+        menu_name: "Sound",
         menu_image: sound
 
     },
     {
-        menu_name: "cookers",
+        menu_name: "Cooker",
         menu_image: cooker
 
     },
     {
-        menu_name: "fans",
+        menu_name: "Fan",
         menu_image: fans
 
     },
     {
-        menu_name: "freezers",
+        menu_name: "Freezer",
         menu_image: freezer
 
     },
     {
-        menu_name: "tables",
+        menu_name: "Center-Table",
         menu_image: table
 
     },
     {
-        menu_name: "washing",
+        menu_name: "Washing-Machine",
         menu_image: washing
 
     },
     {
-        menu_name: "ac",
+        menu_name: "AC",
         menu_image: air
 
     },
     {
-        menu_name: "iron",
+        menu_name: "Iron",
         menu_image: iron
 
     },
     {
-        menu_name: "generator",
+        menu_name: "Generator",
         menu_image: generator
 
     },

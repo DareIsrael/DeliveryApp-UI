@@ -1,17 +1,22 @@
 
 
 .food-item {
-    width: 100%;
+    width: 80%;
     margin: auto;
-    border-top-left-radius: 105px;
-    border-bottom-right-radius: 90px;
-    box-shadow: 0px;
-    box-shadow: 10px 10px 20px 15px #00000015;
+    gap: 0;
     transition: 0.3s;
     animation: fadeIn 1s;
+    
    
    
 }
+
+.food-item:hover {
+    /* width: 100%; */
+    box-shadow: 10px 10px 20px 15px #00000015;
+    /* animation: ease-in; */
+    
+} 
 
 .food-item-image {
    width: 100%;
@@ -22,17 +27,23 @@
 }
 .rating-stars {
     width: 80px;
+    /* margin: 0; */
 }
 
 .food-item-info {
     padding: 20px;
+    line-height: 0.7;
+    font-family: 'Poppins' !important;
+    /* font-weight: 600; */
+    
 }
-.food-item-name-rating{
+/* .food-item-name-rating{
     display: flex;
+    gap: 0;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-}
+} */
 .food-item-name-rating p {
     font-size: 15px;
     font-weight: 500;
@@ -50,7 +61,8 @@
   font-size: 18px;
   font-weight: 500;
   margin: 10px 0px;
-  font-family: poppin;
+  font-family: 'Poppins', sans-serif;
+  /* font-weight: 600; */
 }
 
 .food-item-img-container {
@@ -112,7 +124,34 @@
     background-color: #4B0082 !important;
  }
   
- 
+ .discount {
+    display: flex;
+    gap: 6px;
+    font-family: poppin;
+    color: white;
+   
+    
+ }
+
+ .food-item-initprice {
+    text-decoration: line-through;
+    font-family: poppin;
+    opacity: 80%;
+    color: black;
+    font-size: 17px;
+ }
+ .discount_percent {
+
+    /* background-color: #4B0082; */
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 4px;
+    font-size: 13px;
+    /* opacity: 60%; */
+    /* border-color: #4B0082; */
+    color: red;
+    margin-left: 6px;
+ }
 
   /* Adjustments for medium screens */
   @media (max-width: 1050px) {
@@ -138,7 +177,7 @@
 
     .btn-secondary {
         padding: 20px 40px !important;
-        background-color: tomato !important;
+        background-color:  #4B0082 !important;
         font-size: 30px !important;
     }
 
@@ -160,6 +199,10 @@
     .close {
         font-size: 40px;
     }
+    .food-item:hover {
+        animation: none;
+    }
+    
 }
 
   

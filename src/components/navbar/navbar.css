@@ -1,9 +1,19 @@
 .navbar {
-    
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    top: 0;
     padding: 0 40px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
+    background-color: white;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    /* margin-bottom: 100px; */
+    /* height: 50px !important; */
+
   
     
 
@@ -16,19 +26,30 @@
     text-decoration: none;
     color: #4B0082;
 }
-.navbar .logo {
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px); /* Adjust height of the bounce */
+    }
+  }
+  
+  .navbar .logo {
     width: 140px;
     margin-left: 30px;
-   
-    
-}
+    animation: bounce 1s ease-in-out infinite; /* Adds the bounce animation */
+  }
+  
+  
 
 .navbar-menu {
     display:  flex;
     list-style: none; 
     gap: 20px;
     color: #49557e;
-    font-size: 18px;
+    font-size: 16px;
+    
  }
 
 .navbar-right {
@@ -36,18 +57,20 @@
   align-items: center;
   gap: 40px;
   margin-top: 10px;
+  
 }
 
 .navbar button {
   background: transparent;
   font-size: 16px;
-  color: #49557e;
+  color: white;
   border: 1px solid#4B0082;
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
-}
+  background-color: #4B0082;
+} 
 
 .navbar button:hover {
   background-color: #fff4f2;
@@ -77,6 +100,7 @@
 
 .navbar-profile {
     position: relative;
+    
 }
 
 .nav-profile-dropdown {
@@ -153,7 +177,8 @@
         font-family: Verdana, sans-serif;
     }
     .navbar .logo {
-        width: 140px;
+        width: 300px;
+        margin-top: 20px;
     }
     .navbar-menu {
         gap: 20px;
@@ -174,8 +199,8 @@
        
     }
     .navbar-right button {
-        padding: 25px 30px;
-        font-size: 45px;
+        padding: 15px 30px;
+        font-size: 35px;
     }
     .navbar-profile img{
         width: 80px;

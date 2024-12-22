@@ -1,0 +1,28 @@
+
+.confirmation-container {
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .confirmation-container h2 {
+    color: #4caf50;
+  }
+  
+  .confirmation-container p {
+    font-size: 18px;
+  }
+  
+  .confirmHome {
+    color: purple;
+    text-decoration: none;
+     
+  }
+  button {
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }

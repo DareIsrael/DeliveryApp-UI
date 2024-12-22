@@ -4,3 +4,11 @@
         height: 300px;
     }
 }
+
+@media (max-width: 1050px) {
+    .smartsupp-widget-button {
+      transform: scale(3.5) !important; /* Adjust scale to your preference */
+      transform-origin: center !important; /* Keeps the icon centered when resized */
+    }
+  }
+  

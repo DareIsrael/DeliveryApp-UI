@@ -178,7 +178,7 @@ import './FoodItem.css';
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 
-const FoodItem = ({ id, name, price, description, image }) => {
+const FoodItem = ({ id, name, price, initprice, discount, description, image }) => {
   const { cartItems, addToCart, removeFromCart } = useContext(StoreContext); // Removed 'url'
   const [showModal, setShowModal] = useState(false);
 
@@ -213,19 +213,27 @@ const FoodItem = ({ id, name, price, description, image }) => {
                 src={assets.add_icon_green} 
                 alt="Add more to cart" 
               />
-              
+            
             </div>
            
           )}
-        
+          
+          
         </div>
         <div className='food-item-info'>
           <div className='food-item-name-rating'>
+
             <p>{name}</p>
-            <img className='rating-stars' src={assets.rating_stars} alt="Rating" />
+            {/* <img className='rating-stars' src={assets.rating_stars} alt="Rating" /> */}
           </div>
+          
           {/* <p className='food-item-desc'>{description}</p> */}
-          <p className='food-item-price'># {price}</p>
+          <p className='food-item-price'> # {Number(price).toLocaleString()}</p>
+          
+          <div className='discount'>
+          <p className='food-item-initprice'>{initprice}</p>
+          <p className='discount_percent'>{discount}</p>
+          </div>
         </div>
       </div>
 

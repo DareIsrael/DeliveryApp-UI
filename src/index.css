@@ -17,7 +17,6 @@
 body {
   min-height: 100vh;
   
-  
 }
 
 a{
@@ -35,12 +34,9 @@ a{
   }
 }
 
-@media (max-width:1050px) {
-  #chat-application-iframe {
-    width: 200px;
-    height: 200px;
-  }
-  .smartsupp-chat-button {
-    transform: scale(4.5); /* Scale the button if needed */
+@media (max-width: 768px) {
+  .smartsupp-widget-button {
+    transform: scale(1.5); /* Adjust scale to your preference */
+    transform-origin: center; /* Keeps the icon centered when resized */
   }
 }

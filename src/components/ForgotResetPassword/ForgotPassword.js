@@ -1,4 +1,3 @@
-
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import './ForgotPassword.css';
@@ -9,6 +8,7 @@ import { StoreContext } from '../../context/StoreContext';
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false); // State for loading spinner
   const { url } = useContext(StoreContext);
 
   const onChangeHandler = (e) => {
@@ -17,7 +17,8 @@ const ForgotPassword = () => {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-   
+    setLoading(true); // Start loading spinner
+
     try {
       const response = await axios.post(`${url}/api/user/forgotpassword`, { email });
 
@@ -29,6 +30,8 @@ const ForgotPassword = () => {
     } catch (error) {
       console.error(error);
       setMessage('An error occurred. Please try again.');
+    } finally {
+      setLoading(false); // Stop loading spinner
     }
   };
 
@@ -51,7 +54,10 @@ const ForgotPassword = () => {
             required
           />
         </div>
-        <button type='submit'>Submit</button>
+        <button type='submit' disabled={loading}>
+          {loading ? 'Submitting...' : 'Submit'}
+        </button>
+        {loading && <div className='spinner'></div>}
         {message && <p className='message'>{message}</p>}
       </form>
     </div>

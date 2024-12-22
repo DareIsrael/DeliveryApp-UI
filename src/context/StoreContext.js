@@ -14,6 +14,8 @@ const StoreContextProvider = (props) => {
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([])
     const [userId, setUserId] = useState(""); 
+    
+
 
    
     console.log(process.env.REACT_APP_BACKEND_BASEURL)
@@ -72,6 +74,8 @@ const StoreContextProvider = (props) => {
             console.error("Error fetching food list:", error);
         }
     };
+
+    
     
 
     const loadCartData = async (token) => {
@@ -94,13 +98,14 @@ const StoreContextProvider = (props) => {
 
     useEffect(() => {
         async function loadData() {
-            // await fetchFoodList();
+            await fetchFoodList();
             if (localStorage.getItem("token")) {
                 const storedToken = localStorage.getItem("token");
                 setToken(storedToken);
-                const decodedToken = jwtDecode(storedToken);
-                console.log(decodedToken);
-                setUserId(decodedToken.id); // Extract userId from decoded token
+                // const decodedToken = jwtDecode(storedToken);
+                // console.log(decodedToken);
+                // setUserId(decodedToken.id); // Extract userId from decoded token
+                setUserId(storedToken.id);
                 await loadCartData(storedToken);
             }
             
@@ -113,6 +118,7 @@ const StoreContextProvider = (props) => {
     const contextValue = {
         food_list,
         fetchFoodList,
+     
         cartItems,
         setCartItems,
         addToCart,
