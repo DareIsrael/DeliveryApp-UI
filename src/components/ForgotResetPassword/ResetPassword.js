@@ -46,7 +46,8 @@ const ResetPassword = ({ setShowResetPassword, setShowLogin }) => {
   useEffect(() => {
     if (success) {
       const timer = setTimeout(() => {
-        navigate('/'); // Redirect to the home page
+        // navigate('/'); // Redirect to the home page
+      setMessage('Password has been reset successfully. Kindly proceed to login');
       }, 3000); // Delay of 3 seconds
 
       return () => clearTimeout(timer); // Clear timeout when component unmounts
@@ -81,8 +82,8 @@ const ResetPassword = ({ setShowResetPassword, setShowLogin }) => {
         <button type='submit'>Reset Password</button>
         {message && <p className='message'>{message}</p>} {/* Display the message */}
 
-        <Link to='/'>
-        <p onClick={()=> setShowLogin(true)}  >Kindly <span className='login_span'>Login</span> after clicking the reset password button</p>
+        <Link to='/' className="login-link" >
+        <p  onClick={()=> setShowLogin(true)}  className='login_span' >Login</p>
         </Link>
        
       </form>

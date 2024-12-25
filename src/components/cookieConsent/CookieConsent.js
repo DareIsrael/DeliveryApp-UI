@@ -28,7 +28,7 @@ const CookieConsent = () => {
         }}
         expires={365}
         onAccept={() => {
-          console.log("User accepted cookies");
+        //   console.log("User accepted cookies");
           // Load non-essential cookies, e.g., analytics
         }}
       >

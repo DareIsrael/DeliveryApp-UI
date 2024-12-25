@@ -101,7 +101,7 @@ const App = () => {
 
 
   const handleDecline = () => {
-    console.log("User declined cookies");
+    // console.log("User declined cookies");
     // Optionally, handle actions for declined cookies (like not loading analytics scripts)
     // You can also set a cookie or flag to remember the user's choice
   };
@@ -157,7 +157,7 @@ const App = () => {
         }}
         expires={365}
         onAccept={() => {
-          console.log("User accepted cookies");
+          // console.log("User accepted cookies");
           // Load non-essential cookies, e.g., analytics
         }}
         onDecline={handleDecline}

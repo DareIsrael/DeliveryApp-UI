@@ -69,7 +69,7 @@ const Verify = () => {
     try {
       const response = await axios.post(`${url}/api/order/verify`, { success, orderId });
       
-      console.log('Response from backend:', response.data); // Add this line for debugging
+      // console.log('Response from backend:', response.data); // Add this line for debugging
 
       if (response.data.success) {
         setMessage("Payment successful! Kindly check your mail for the receipt. Redirecting...");

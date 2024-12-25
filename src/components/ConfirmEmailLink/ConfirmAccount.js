@@ -32,7 +32,7 @@ const ConfirmAccount = () => {
   }, [token]);
 
   return (
-    <div>
+    <div className='confirmation-container'>
       <h2>Account Confirmation</h2>
       <p>{confirmationStatus}</p>
       <Link to='/' className='confirmHome' > <button >Home ►</button> </Link>
