@@ -251,7 +251,7 @@ const FoodItem = ({ id, name, price, initprice, discount, description, image }) 
               <img className="img-fluid custom-modal-img" src={image} alt={name} />  {/* Cloudinary URL */}
              
               <p>{name}</p>
-              <p className='food-item-price'>#{price}</p>
+              <p className='food-item-price'># {Number(price).toLocaleString()}</p>
             </div>
             <p>{description}</p>
             
