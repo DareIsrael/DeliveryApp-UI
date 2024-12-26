@@ -136,22 +136,23 @@ const App = () => {
         style={{
           background: "#333",
           color: "white",
-          fontSize: "14px",
+          fontSize: "20px",
           padding: "15px",
           textAlign: "center",
         }}
         buttonStyle={{
           background: "#4e9c4e",
           color: "#fff",
-          fontSize: "13px",
+          fontSize: "20px",
           padding: "10px",
           borderRadius: "5px",
           marginLeft: "10px",
         }}
         declineButtonStyle={{
+          
           background: "#e74c3c", // Red for the Decline button
           color: "#fff",
-          fontSize: "13px",
+          fontSize: "20px",
           padding: "10px",
           borderRadius: "5px",
         }}

@@ -31,7 +31,7 @@ const Footer = () => {
 
           <div className='footer-contact'>
 
-          <div className='footer-content-center'>
+          {/* <div className='footer-content-center'>
            <h2>COMPANY</h2>
            <ul>
            <li>Home</li>
@@ -40,19 +40,19 @@ const Footer = () => {
            <li>Privacy</li>
             
            </ul>
-          </div>
+          </div> */}
           
           <div className='footer-content-right'>
            <h2>GET IN TOUCH</h2>
-           <ul>
-            <li>07030661043</li>
-            <li>dareisrael4@gmail.com</li>
-            <div>
+           
+            <p>07030661043</p>
+            <p>dareisrael4@gmail.com</p>
+            {/* <div>
                 <img  src={assets.facebook_icon} />
                 <img  src={assets.twitter_icon}/>
                 <img  src={assets.instagram_icon} />
-            </div>
-           </ul>
+            </div> */}
+         
            
           </div>
 

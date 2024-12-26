@@ -40,33 +40,35 @@
 
   
 
-.footer-contact {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 200px;
-}
 
 .footer-content {
     width: 100%;
     /* display: grid; */
     grid-template-columns: 2fr 1fr 1fr;
     gap: 80px;
+
 }
 
-.footer-content-left, .footer-content-right, .footer-content-center {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
-}
-.footer-content-left li, .footer-content-right li, .footer-content-center li {
-    list-style: none;
-    margin-bottom: 10px;
-    cursor: pointer;
-    color: silver;
-}
-.footer-content-left h2, .footer-content-right h2, .footer-content-center h2 {
+.footer-content-right {
+    margin-left: 50px;
+    margin-bottom: 70px;
+    
+    
     color: white;
+}
+
+.footer-content-left p, .footer-content-right p, .footer-content-center li {
+    list-style: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.footer-content-left h2, .footer-content-center h2 {
+    color: white;
+}
+
+.footer-content-right h2{
+    color: white;
+    font-weight: 800;
 }
 
 .footer-social-icons img {
