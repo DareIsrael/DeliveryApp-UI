@@ -23,7 +23,7 @@ const ForgotPassword = () => {
       const response = await axios.post(`${url}/api/user/forgotpassword`, { email });
 
       if (response.data.success) {
-        setMessage('If an account with that email exists, a password reset link has been sent to the email.');
+        setMessage("A password reset link has been sent to your email. If you cannot find it in your inbox, please check your spam or junk folder.");
       } else {
         setMessage(response.data.message);
       }
