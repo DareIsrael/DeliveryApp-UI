@@ -83,6 +83,7 @@ import About from './components/about/About';
 import SuccessLogin from './components/SuccessLogin/SuccessLogin';
 import ConfirmAccount from './components/ConfirmEmailLink/ConfirmAccount';
 import CookieConsent from 'react-cookie-consent';
+import ScrollToTop from './components/Scrolltop/ScrollToTop';
 
 
 const App = () => {
@@ -113,6 +114,7 @@ const App = () => {
 
       <div className='app'>
         <Navbar setShowLogin={setShowLogin} />
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart setShowLogin={setShowLogin} />} />
@@ -170,3 +172,4 @@ const App = () => {
 };
 
 export default App;
+

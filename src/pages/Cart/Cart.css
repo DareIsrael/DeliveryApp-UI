@@ -24,10 +24,12 @@
 }
 .cart-items-item {
     margin: 10px 0px;
-    color: grey;
+    color: black;
+    font-weight: 500;
     border-style: dotted;
     border-width: 2px;
     border-color: gray;
+    /* background-color: silver; */
 
 }
 .cart-items-item img {
@@ -126,6 +128,10 @@
 }
 .cross {
     color: red;
+    background-color: #4B0082;
+    padding: 20px 50px  20px;
+    border-radius: 10px;
+    font-size: 23px;
 }
 
 .empty-cart-message {
@@ -156,7 +162,9 @@
     }
     
     .cart-items-title p {
-    font-size: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    /* color: black; */
    }
    .cart-items-title img {
     width: 200px;
@@ -194,6 +202,14 @@
     padding-top: 40px;
    }
    .cart-total-details p {
+    font-size: 30px;
+    
+   }
+   .cart-total-details b {
+    font-weight: 800;
+   }
+   .cross {
+    color: red;
     font-size: 30px;
    }
 }

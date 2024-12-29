@@ -45,8 +45,8 @@ const Footer = () => {
           <div className='footer-content-right'>
            <h2>GET IN TOUCH</h2>
            
-            <p>07030661043</p>
-            <p>dareisrael4@gmail.com</p>
+            <p>Phone: 07030661043</p>
+            <p>Email: support@myelectrovault.com</p>
             {/* <div>
                 <img  src={assets.facebook_icon} />
                 <img  src={assets.twitter_icon}/>
