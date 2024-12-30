@@ -10,10 +10,11 @@
 }
 
 .my-orders-order {
-   display: grid;
-   grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+   display: flex;
+   /* grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr; */
+
    align-items: center;
-   gap: 30px;
+   gap: 65px;
    font-size: 14px;
    padding: 10px 20px;
    color: #454545;
@@ -66,6 +67,7 @@
         margin-top: 170px;
         
     }
+
     .my-orders-order {
         /* grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr; */
         /* grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr; */
@@ -75,10 +77,20 @@
         font-size: 24px;
        
     }
+    .my-orders-order img {
+        display: none;
+    }
     .my-orders-order button{
         font-size: 30px;
     }
     .container {
       max-width: 100% !important;
     }
+    /* styles.css */
+.payment-status-paid {
+    font-size: 19px;
+}
+.payment-status-failed {
+    font-size: 19px;
+}
 }
