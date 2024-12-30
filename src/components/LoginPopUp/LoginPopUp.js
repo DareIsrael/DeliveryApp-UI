@@ -194,9 +194,9 @@ const LoginPopUp = ({ setShowLogin, setSuccessLogin }) => {
       if (response.data.success) {
         if (currState === "Sign Up") {
 
-          setConfirmationMessage("A confirmation link has been sent to your email. Please verify your account.");
+          setConfirmationMessage("A confirmation link has been sent to your email address. Please check your inbox or spam folder to confirm your account.");
           setData({ name: "", email: "", phoneNumber: "", password: "", passwordConfirm: "" }); // Reset form fields
-          
+
         } else {
           setToken(response.data.token);
           localStorage.setItem("token", response.data.token);

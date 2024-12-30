@@ -139,10 +139,45 @@
   }
   
   .confirmation-message {
-    background-color: rgb(144, 202, 144);
-    color: black;
-    
-  }
+    background-color: rgb(109, 50, 109); /* Green background for success */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size */
+    font-weight: 500; /* Medium font weight */
+    padding: 10px 20px; /* Padding around the message */
+    border-radius: 5px; /* Rounded corners */
+    margin: 20px 0; /* Space around the message */
+    display: inline-block; /* Inline-block for the message to adapt to content */
+    text-align: center; /* Center the text */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+    animation: slideIn 0.5s ease-out; /* Smooth slide-in animation */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Optionally, you can add a hover effect to make it more interactive */
+.confirmation-message:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 1050px) {
+    .confirmation-message {
+        font-size: 20px; /* Slightly smaller text on mobile */
+        padding: 8px 16px; /* Adjust padding for mobile */
+        margin: 15px 0; /* Less margin on small screens */
+    }
+}
+
   /* Media queries */
   
   /* Tablet devices */
@@ -171,6 +206,15 @@
       font-size: 35px !important;
       /* width: 100px !important; */
     }
+    input[type="checkbox"] {
+      width: 55px; /* Increase the size of the checkbox */
+      height: 55px;
+  }
+
+  label {
+      font-size: 14px; /* Smaller font size for mobile */
+      margin-left: 8px; /* Adjust margin for mobile */
+  }
   }
 
   .spinner {

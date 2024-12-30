@@ -18,9 +18,7 @@ const StoreContextProvider = (props) => {
 
 
    
-    // console.log(process.env.REACT_APP_BACKEND_BASEURL)
     
-    // "http://localhost:4000"
    
 
     const addToCart = async (itemId) => {

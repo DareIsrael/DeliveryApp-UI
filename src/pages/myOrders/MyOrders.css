@@ -41,16 +41,38 @@
     color: white;
 }
 
+/* styles.css */
+.payment-status-paid {
+    background-color: lightgreen;
+    color: green;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .payment-status-failed {
+    background-color: lightcoral;
+    color: red;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+   
+
 @media (max-width: 1050px) {
     .my-orders {
         margin-top: 170px;
         
     }
     .my-orders-order {
-        /* grid-template-columns: 1fr 2fr 1fr; */
-        grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+        /* grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr; */
+        /* grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr; */
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
         row-gap: 5px;
-        font-size: 20px;
+        font-size: 24px;
        
     }
     .my-orders-order button{

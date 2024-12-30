@@ -1,7 +1,7 @@
 
 
 .food-item {
-    width: 80%;
+    width: 90%;
     margin: auto;
     gap: 0;
     transition: 0.3s;
@@ -46,8 +46,8 @@
 } */
 .food-item-name-rating p {
     font-size: 15px;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-weight: 500; */
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 .food-item-name-rating img {
     width: 60px;
@@ -59,7 +59,7 @@
 .food-item-price {
   color: black;  
   font-size: 18px;
-  font-weight: 500;
+  /* font-weight: 500; */
   margin: 10px 0px;
   font-family: 'Poppins', sans-serif;
   /* font-weight: 600; */
@@ -67,19 +67,20 @@
 
 .food-item-img-container {
     position: relative;
+    
 }
 .food-item-img-container .add {
-   
+    
     position: absolute;
-    bottom: 15px;
+    bottom: 0;
     right: 15px;
     cursor: pointer;
     border-radius: 6px;
-    color: white;
+    
     background-color: #4B0082;
     
     padding: 5px;
-    font-size: 15px;
+    font-size: 18px;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
     color: silver;
@@ -109,7 +110,7 @@
     
 }
 .food-item-counter img {
-    width: 30px;
+    width: 40px;
 }
 .custom-modal-img {
     width: 100%;
@@ -156,18 +157,20 @@
   /* Adjustments for medium screens */
   @media (max-width: 1050px) {
     .food-item-info p {
-        font-size: 25px;
+        font-size: 35px;
+        margin-bottom: 30px;
     }
 
     .food-item-image {
         max-width: 100%;
-        max-height: 200px;
+        
+        /* max-height: 200px; */
     }
 
     .add {
-        width: 120px !important;
-        height: 60px !important;
-        font-size: 22px !important;
+        width: 180px !important;
+        height: 80px !important;
+        font-size: 29px !important;
         margin-bottom: -27px !important;
     }
 
@@ -202,7 +205,13 @@
     .food-item:hover {
         animation: none;
     }
-    
+    .food-item-info {
+        margin-top: 34px;
+        gap: 20px;
+    }
+    .discount {
+        gap: 20px;
+    }
 }
 
   

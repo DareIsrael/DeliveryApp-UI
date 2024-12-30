@@ -42,6 +42,10 @@ const MyOrders = () => {
              })}</p>
              <p># {(order.amount).toLocaleString()}</p>
              <p>Items: {order.items.length}</p>
+             <p className={order.payment ? "payment-status-paid" : "payment-status-failed"}>
+              Payment Status: {order.payment ? "Paid" : "Failed"}
+             </p>
+
              <p><span>&#x25cf;</span> <b>{order.status} </b> </p>
              <button onClick={fetchOrders}>Track Order</button>
             </div>
@@ -57,3 +61,61 @@ const MyOrders = () => {
 }
 
 export default MyOrders
+
+// import React, { useContext, useEffect, useState } from 'react';
+// import "./MyOrders.css";
+// import { StoreContext } from '../../context/StoreContext';
+// import axios from "axios";
+// import { assets } from '../../assets/assets';
+
+// const MyOrders = () => {
+//   const { url, token } = useContext(StoreContext);
+//   const [data, setData] = useState([]);
+
+//   const fetchOrders = async () => {
+//     try {
+//       const response = await axios.post(`${url}/api/order/userorders`, {}, {
+//         headers: {
+//           Authorization: `Bearer ${token}`
+//         }
+//       });
+//       setData(response.data.data);
+//     } catch (error) {
+//       console.error('Error fetching orders:', error);
+//     }
+//   };
+
+//   useEffect(() => {
+//     if (token) {
+//       fetchOrders();
+//     }
+//   }, [token]);
+
+//   return (
+//     <div className='my-orders'>
+//       <h2>My Orders</h2>
+//       <div className='container'>
+//         {data.length > 0 ? (
+//           data.map((order, index) => (
+//             <div key={index} className='my-orders-order'>
+//               <img src={assets.parcel_icon} alt="Parcel Icon" />
+//               <p>
+//                 {order.items.map((item, index) => (
+//                   `${item.name} x ${item.quantity}` + (index === order.items.length - 1 ? '' : ' , ')
+//                 ))}
+//               </p>
+//               <p># {(order.amount).toLocaleString()}</p>
+//               <p>Items: {order.items.length}</p>
+//               <p><span>&#x25cf;</span> <b>{order.status}</b></p>
+//               <button onClick={fetchOrders}>Track Order</button>
+//             </div>
+//           ))
+//         ) : (
+//           <p>No orders found.</p>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default MyOrders;

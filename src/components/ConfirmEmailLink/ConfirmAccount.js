@@ -16,7 +16,7 @@ const ConfirmAccount = () => {
 
     const confirmAccount = async () => {
       try {
-        console.log('Token from URL:', token); // Debugging line to check token
+        
         const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/user/confirm/${token}`);
         if (response.data.success) {
           setConfirmationStatus('Your account has been successfully confirmed! pls SignIn');
