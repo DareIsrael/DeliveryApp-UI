@@ -158,9 +158,9 @@ const Cart = ({ setShowLogin }) => {
                                     <div className='cart-items-title cart-items-item'>
                                         <img src={item.image} alt='' />
                                         <p>{item.name}</p>
-                                        <p>#{Number(item.price).toLocaleString()}</p>
+                                        <p>₦ {Number(item.price).toLocaleString()}</p>
                                         <p>{cartItems[item._id]}</p>
-                                        <p>#{(item.price * cartItems[item._id]).toLocaleString()}</p>
+                                        <p>₦ {(item.price * cartItems[item._id]).toLocaleString()}</p>
                                         <p onClick={() => removeFromCart(item._id)} className='cross'>x</p>
                                     </div>
                                     <hr />
@@ -178,17 +178,17 @@ const Cart = ({ setShowLogin }) => {
                     <div>
                         <div className='cart-total-details'>
                             <p>Subtotal</p>
-                            <p>#{getTotalCartAmount().toLocaleString()}</p>
+                            <p>₦ {getTotalCartAmount().toLocaleString()}</p>
                         </div>
                         <hr />
                         <div className='cart-total-details'>
                             <p>Delivery Fee</p>
-                            <p>#{(getTotalCartAmount() === 0 ? 0 : 2000).toLocaleString()}</p>
+                            <p>₦ {(getTotalCartAmount() === 0 ? 0 : 2000).toLocaleString()}</p>
                         </div>
                         <hr />
                         <div className='cart-total-details'>
                             <b>Total</b>
-                            <b>#{(getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2000).toLocaleString()}</b>
+                            <b>₦ {(getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2000).toLocaleString()}</b>
                         </div>
                     </div>
                     <button onClick={check_Out}>PROCEED TO CHECKOUT</button>

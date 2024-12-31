@@ -212,6 +212,19 @@
     .discount {
         gap: 20px;
     }
+    .modal-dialog {
+        margin : 0;
+        max-width: 90% !important;
+      }
+      .modal-full-mobile {
+        width : 100vw;
+        height :100vh;
+      }
+      .modal_des {
+        margin: 15px;
+        font-size: 32px;
+        font-weight: 500;
+      }
 }
 
   

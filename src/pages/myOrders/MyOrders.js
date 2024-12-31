@@ -40,7 +40,7 @@ const MyOrders = () => {
                 }
 
              })}</p>
-             <p># {(order.amount).toLocaleString()}</p>
+             <p>₦ {(order.amount).toLocaleString()}</p>
              <p>Items: {order.items.length}</p>
              <p className={order.payment ? "payment-status-paid" : "payment-status-failed"}>
               Payment Status: {order.payment ? "Paid" : "Failed"}

@@ -104,17 +104,17 @@ const PlaceOrder = () => {
                     <div>
                         <div className='cart-total-details'>
                             <p>Subtotal</p>
-                            <p># {getTotalCartAmount().toLocaleString()}</p>
+                            <p>₦ {getTotalCartAmount().toLocaleString()}</p>
                         </div>
                         <hr />
                         <div className='cart-total-details'>
                             <p>Delivery Fee</p>
-                            <p># {(getTotalCartAmount() === 0 ? 0 : 2000).toLocaleString()}</p>
+                            <p>₦ {(getTotalCartAmount() === 0 ? 0 : 2000).toLocaleString()}</p>
                         </div>
                         <hr />
                         <div className='cart-total-details'>
                             <b>Total</b>
-                            <b># {(getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2).toLocaleString()}</b>
+                            <b>₦ {(getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2).toLocaleString()}</b>
                         </div>
                     </div>
                     <button type='submit' >PROCEED TO PAYMENT</button>
