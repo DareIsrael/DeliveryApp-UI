@@ -32,6 +32,17 @@ const MyOrders = () => {
           return (
             <div key={index} className='my-orders-order'> 
              <img src={assets.parcel_icon}  />
+              <p className='order_time'>
+                {new Date(order.date).toLocaleString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  hour: "numeric",
+                  minute: "numeric",
+                  second: "numeric",
+                  hour12: true,
+                })}
+              </p>
              <p>{order.items.map((item, index)=> {
                 if (index === order.items.length - 1) {
                     return item.name + " x " + item.quantity
@@ -45,6 +56,7 @@ const MyOrders = () => {
              <p className={order.payment ? "payment-status-paid" : "payment-status-failed"}>
               Payment Status: {order.payment ? "Paid" : "Failed"}
              </p>
+             
 
              <p><span>&#x25cf;</span> <b>{order.status} </b> </p>
              <button onClick={fetchOrders}>Track Order</button>

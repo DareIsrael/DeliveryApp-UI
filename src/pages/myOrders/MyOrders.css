@@ -1,5 +1,7 @@
 .my-orders {
     margin: 50px 0px;
+    /* */
+   
 }
 
 .my-orders .container {
@@ -12,7 +14,7 @@
 .my-orders-order {
    display: flex;
    /* grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr; */
-
+   position: relative; 
    align-items: center;
    gap: 65px;
    font-size: 14px;
@@ -33,7 +35,7 @@
 }
 .my-orders-order button {
     border: none;
-    padding: 12px 0px;
+    padding: 12px 12px;
     border-radius: 4px;
     /* background-color: #ffe1e1; */
     background-color: #8b2fcd9e;
@@ -60,12 +62,18 @@
     text-align: center;
     font-weight: bold;
   }
-   
+   .order_time {
+    position: absolute;
+    font-size: 10px;
+    bottom: -16px;
+    color: silver;
+    /* margin-bottom: -80px; */
+   }
 
 @media (max-width: 1050px) {
     .my-orders {
         margin-top: 170px;
-        
+       
     }
 
     .my-orders-order {
@@ -75,6 +83,7 @@
         grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
         row-gap: 5px;
         font-size: 24px;
+        position: relative;
        
     }
     .my-orders-order img {
@@ -92,5 +101,12 @@
 }
 .payment-status-failed {
     font-size: 19px;
+}
+.order_time {
+    position: absolute;
+    bottom: -15px;
+    left: 15px;
+    font-size: 18px;
+    color: silver;
 }
 }
