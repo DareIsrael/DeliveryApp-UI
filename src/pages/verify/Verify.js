@@ -165,62 +165,62 @@
 // export default Verify;
 
 
-import React, { useContext, useEffect, useState } from 'react';
-import "./Verify.css";
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import { StoreContext } from '../../context/StoreContext';
-import axios from "axios";
+// import React, { useContext, useEffect, useState } from 'react';
+// import "./Verify.css";
+// import { useNavigate, useSearchParams } from 'react-router-dom';
+// import { StoreContext } from '../../context/StoreContext';
+// import axios from "axios";
 
-const Verify = () => {
-  const [searchParams] = useSearchParams();
-  const orderId = searchParams.get("orderId"); // Get the orderId from query parameters
-  const { url } = useContext(StoreContext);
-  const navigate = useNavigate();
-  const [message, setMessage] = useState("Checking your payment status...");
-  const [isLoading, setIsLoading] = useState(true);
+// const Verify = () => {
+//   const [searchParams] = useSearchParams();
+//   const orderId = searchParams.get("orderId"); // Get the orderId from query parameters
+//   const { url } = useContext(StoreContext);
+//   const navigate = useNavigate();
+//   const [message, setMessage] = useState("Checking your payment status...");
+//   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchPaymentStatus = async () => {
-    if (!orderId) {
-      setMessage("Invalid parameters. Redirecting...");
-      setTimeout(() => navigate("/"), 2000);
-      return;
-    }
+//   const fetchPaymentStatus = async () => {
+//     if (!orderId) {
+//       setMessage("Invalid parameters. Redirecting...");
+//       setTimeout(() => navigate("/"), 2000);
+//       return;
+//     }
 
-    try {
-      // Make a request to the backend to get the payment status of the order
-      const response = await axios.get(`${url}/api/verifyPayment/${orderId}`); // Assuming this endpoint returns the payment status
+//     try {
+//       // Make a request to the backend to get the payment status of the order
+//       const response = await axios.get(`${url}/api/verifyPayment/${orderId}`); // Assuming this endpoint returns the payment status
 
-      const { paymentStatus } = response.data;
+//       const { paymentStatus } = response.data;
 
-      if (paymentStatus === "Paid") {
-        setMessage("Payment successful! Redirecting to your orders...");
-        setTimeout(() => navigate("/myorders"), 3000);
-      } else {
-        setMessage("Payment failed or still pending. Redirecting...");
-        setTimeout(() => navigate("/"), 3000);
-      }
-    } catch (error) {
-      console.error("Error fetching payment status:", error);
-      setMessage("An error occurred while verifying your payment. Please try again.");
-      setTimeout(() => navigate("/"), 2000);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+//       if (paymentStatus === "Paid") {
+//         setMessage("Payment successful! Redirecting to your orders...");
+//         setTimeout(() => navigate("/myorders"), 3000);
+//       } else {
+//         setMessage("Payment failed or still pending. Redirecting...");
+//         setTimeout(() => navigate("/"), 3000);
+//       }
+//     } catch (error) {
+//       console.error("Error fetching payment status:", error);
+//       setMessage("An error occurred while verifying your payment. Please try again.");
+//       setTimeout(() => navigate("/"), 2000);
+//     } finally {
+//       setIsLoading(false);
+//     }
+//   };
 
-  useEffect(() => {
-    fetchPaymentStatus();
-  }, [navigate, orderId, url]);
+//   useEffect(() => {
+//     fetchPaymentStatus();
+//   }, [navigate, orderId, url]);
 
-  return (
-    <div className='verify'>
-      {isLoading ? (
-        <div className='spinner'></div> // Show spinner while loading
-      ) : (
-        <div className='verify-message'>{message}</div>
-      )}
-    </div>
-  );
-};
+//   return (
+//     <div className='verify'>
+//       {isLoading ? (
+//         <div className='spinner'></div> // Show spinner while loading
+//       ) : (
+//         <div className='verify-message'>{message}</div>
+//       )}
+//     </div>
+//   );
+// };
 
-export default Verify;
+// export default Verify;
