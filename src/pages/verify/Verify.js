@@ -165,62 +165,67 @@
 // export default Verify;
 
 
-// import React, { useContext, useEffect, useState } from 'react';
-// import "./Verify.css";
-// import { useNavigate, useSearchParams } from 'react-router-dom';
-// import { StoreContext } from '../../context/StoreContext';
-// import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import axios from 'axios';
+import './Verify.css';
 
-// const Verify = () => {
-//   const [searchParams] = useSearchParams();
-//   const orderId = searchParams.get("orderId"); // Get the orderId from query parameters
-//   const { url } = useContext(StoreContext);
-//   const navigate = useNavigate();
-//   const [message, setMessage] = useState("Checking your payment status...");
-//   const [isLoading, setIsLoading] = useState(true);
+const Verify = () => {
+    const [searchParams] = useSearchParams();
+    const orderId = searchParams.get("orderId");  // Get orderId from URL
+    const navigate = useNavigate();
+    const [message, setMessage] = useState("Verifying your payment...");
+    const [isLoading, setIsLoading] = useState(true);
 
-//   const fetchPaymentStatus = async () => {
-//     if (!orderId) {
-//       setMessage("Invalid parameters. Redirecting...");
-//       setTimeout(() => navigate("/"), 2000);
-//       return;
-//     }
+    const fetchPaymentStatus = async () => {
+        try {
+            // Fetch the payment status of the order from the backend
+            const response = await axios.get(`/api/orders/payment-status/${orderId}`);
 
-//     try {
-//       // Make a request to the backend to get the payment status of the order
-//       const response = await axios.get(`${url}/api/verifyPayment/${orderId}`); // Assuming this endpoint returns the payment status
+            if (response.data.success) {
+                const paymentStatus = response.data.paymentStatus;
 
-//       const { paymentStatus } = response.data;
+                if (paymentStatus === "Paid") {
+                    setMessage("Payment successful! Redirecting to your orders...");
+                    setTimeout(() => navigate("/myorders"), 3000);  // Redirect after success
+                } else if (paymentStatus === "Failed") {
+                    setMessage("Payment failed. Please try again later.");
+                    setTimeout(() => navigate("/"), 3000);  // Redirect after failure
+                } else {
+                    setMessage("Payment status unknown. Please try again.");
+                    setTimeout(() => navigate("/"), 3000);
+                }
+            } else {
+                setMessage("Order not found. Redirecting...");
+                setTimeout(() => navigate("/"), 2000);  // Redirect if order not found
+            }
+        } catch (error) {
+            console.error("Error fetching payment status:", error);
+            setMessage("Error verifying payment. Please try again.");
+            setTimeout(() => navigate("/"), 2000);  // Redirect if error occurs
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
-//       if (paymentStatus === "Paid") {
-//         setMessage("Payment successful! Redirecting to your orders...");
-//         setTimeout(() => navigate("/myorders"), 3000);
-//       } else {
-//         setMessage("Payment failed or still pending. Redirecting...");
-//         setTimeout(() => navigate("/"), 3000);
-//       }
-//     } catch (error) {
-//       console.error("Error fetching payment status:", error);
-//       setMessage("An error occurred while verifying your payment. Please try again.");
-//       setTimeout(() => navigate("/"), 2000);
-//     } finally {
-//       setIsLoading(false);
-//     }
-//   };
+    useEffect(() => {
+        if (orderId) {
+            fetchPaymentStatus();  // Call the function to verify the payment status
+        } else {
+            setMessage("Invalid parameters. Redirecting...");
+            setTimeout(() => navigate("/"), 2000);  // Redirect if orderId is not found
+        }
+    }, [navigate, orderId]);
 
-//   useEffect(() => {
-//     fetchPaymentStatus();
-//   }, [navigate, orderId, url]);
+    return (
+        <div className='verify'>
+            {isLoading ? (
+                <div className='spinner'></div> // Show a loading spinner
+            ) : (
+                <div className='verify-message'>{message}</div> // Display the message
+            )}
+        </div>
+    );
+};
 
-//   return (
-//     <div className='verify'>
-//       {isLoading ? (
-//         <div className='spinner'></div> // Show spinner while loading
-//       ) : (
-//         <div className='verify-message'>{message}</div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Verify;
+export default Verify;
