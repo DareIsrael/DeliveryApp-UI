@@ -130,7 +130,7 @@ const App = () => {
       
       <Footer />
 
-      <CookieConsent
+      {/* <CookieConsent
         location="bottom"
         buttonText="Accept"
         declineButtonText="Decline"
@@ -166,7 +166,7 @@ const App = () => {
         onDecline={handleDecline}
       >
         We use cookies to enhance your experience. By continuing, you agree to our <a href="/privacy-policy" style={{ color: "#00aaff" }}>Privacy Policy</a>.
-      </CookieConsent>
+      </CookieConsent> */}
     </>
   );
 };

@@ -177,6 +177,9 @@ import React, { useContext, useState } from 'react';
 import './FoodItem.css';
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
+import { Link, useNavigate } from 'react-router-dom'
+import Reviews from '../Reviews/Reviews';
+
 
 const FoodItem = ({ id, name, price, initprice, discount, description, image }) => {
   const { cartItems, addToCart, removeFromCart } = useContext(StoreContext); // Removed 'url'
@@ -188,36 +191,38 @@ const FoodItem = ({ id, name, price, initprice, discount, description, image }) 
   return (
     <>
       <div className='food-item' id='food-item'>
-        <div className='food-item-img-container'>
+        <div onClick={handleShow} className='food-item-img-container'>
           <img 
             className='food-item-image' 
             src={image}  // Cloudinary URL is used directly
             alt={name}
             onClick={handleShow} // Trigger modal on image click
           />
-          {!cartItems[id] ? (
-              <button className='add' 
-              onClick={() => addToCart(id)}  >Add to cart</button> 
+           
+           <button className='add' >Buy Now</button> 
+           {/* {!cartItems[id] ? (
+              <button className='add'  
+                 >Buy Now</button>  
               
-          ) : (
-            <div className='food-item-counter'>
+           ) : (
+             <div className='food-item-counter'> 
            
               <img 
-                onClick={() => removeFromCart(id)}  // Pass the id to removeFromCart
+              onClick={() => removeFromCart(id)}  
                 src={assets.remove_icon_red} 
-                alt="Remove from cart" 
-              />
-              <p>{cartItems[id]}</p>  {/* Display the quantity specific to this item */}
-              <img  
-                onClick={() => addToCart(id)}  // Pass the id to addToCart
-                src={assets.add_icon_green} 
-                alt="Add more to cart" 
-              />
+                 alt="Remove from cart" 
+              /> 
+              <p>{cartItems[id]}</p>   
+               <img  
+                 onClick={() => addToCart(id)}  
+                src={assets.add_icon_green}  
+                 alt="Add more to cart"  
+               /> 
             
-            </div>
+             </div>
            
-          )}
-          
+           )} 
+           */}
           
         </div>
         <div className='food-item-info'>
@@ -251,11 +256,61 @@ const FoodItem = ({ id, name, price, initprice, discount, description, image }) 
               <img className="img-fluid custom-modal-img" src={image} alt={name} />  {/* Cloudinary URL */}
              
               <p>{name}</p>
+              
               <p className='food-item-price'>₦ {Number(price).toLocaleString()}</p>
+              {/* <p className='star'>★★★★★</p> */}
             </div>
+            <p className='prod_details'>Product details</p>
             <p className='modal_des'>{description}</p>
-            
 
+            <hr></hr>
+
+            <div  className='add_cart_modal'>
+            
+            {!cartItems[id] ? (
+              <button className='add_modal' 
+              onClick={() => addToCart(id)}  >Add to cart</button> 
+              
+          ) : (
+            <div className='food-item-modal'>
+           
+              <img 
+                onClick={() => removeFromCart(id)}  // Pass the id to removeFromCart
+                src={assets.remove_icon_red} 
+                alt="Remove from cart" 
+              />
+              <p className='cart_quantity'>{cartItems[id]}</p>  {/* Display the quantity specific to this item */}
+              <img  
+                onClick={() => addToCart(id)}  // Pass the id to addToCart
+                src={assets.add_icon_green} 
+                alt="Add more to cart" 
+              />
+              
+            
+            </div>
+           
+          )}
+          {!cartItems[id] ? (
+           <></>
+              
+          ) : (
+            <div className='cart_modal'>
+           <Link to='/cart' ><img src={assets.cart} /> </Link>
+
+            <div className="dot"></div>
+           
+    </div>
+          )
+
+           }
+
+           </div>
+           <div className="reviews-section">
+             
+           {/* <Reviews foodId={id} /> */}
+              
+            </div>
+            
             <div className="modal-footer">
              
         

@@ -69,6 +69,10 @@
     color: silver;
     /* margin-bottom: -80px; */
    }
+   .receipt {
+    background-color: silver !important;
+    color: black !important;
+   }
 
 @media (max-width: 1050px) {
     .my-orders {
@@ -108,5 +112,8 @@
     left: 15px;
     font-size: 18px;
     color: silver;
+}
+.track {
+    /* display: flex; */
 }
 }

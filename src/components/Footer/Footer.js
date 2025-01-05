@@ -45,7 +45,7 @@ const Footer = () => {
           <div className='footer-content-right'>
            <h2>GET IN TOUCH</h2>
            
-            <p>Phone: 07030661043</p>
+            <p>Phone: 09164633498</p>
             <p>Email: support@myelectrovault.com</p>
             {/* <div>
                 <img  src={assets.facebook_icon} />
@@ -61,7 +61,7 @@ const Footer = () => {
 
        </div>
        <hr />
-       <p className='footer-copyright'>Copyright 2024. Bright.com- All Right Reserved</p>
+       <p className='footer-copyright'>©2025 MyElectrovault| All Right Reserved</p>
     </div>
   )
 }

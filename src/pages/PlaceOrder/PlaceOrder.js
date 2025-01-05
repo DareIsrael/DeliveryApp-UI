@@ -41,7 +41,7 @@ const PlaceOrder = () => {
         userId: userId,
         address: data,
         items: orderItems,
-        amount: getTotalCartAmount() + 2
+        amount: getTotalCartAmount() + 2000
     }
 
     let response = await axios.post(url+"/api/order/place", orderData, { headers: {
@@ -114,7 +114,7 @@ const PlaceOrder = () => {
                         <hr />
                         <div className='cart-total-details'>
                             <b>Total</b>
-                            <b>₦ {(getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2).toLocaleString()}</b>
+                            <b>₦ {(getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2000).toLocaleString()}</b>
                         </div>
                     </div>
                     <button type='submit' >PROCEED TO PAYMENT</button>

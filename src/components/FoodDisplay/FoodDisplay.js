@@ -143,6 +143,7 @@ import './FoodDisplay.css';
 import { StoreContext } from '../../context/StoreContext';
 import FoodItem from '../FoodItem/FoodItem';
 
+
 const FoodDisplay = ({ category }) => {
     const { food_list, fetchFoodList } = useContext(StoreContext);
     const [searchQuery, setSearchQuery] = useState("");
@@ -204,6 +205,7 @@ const FoodDisplay = ({ category }) => {
                                 image={item.image}
                             />
                         );
+                        
                     }
                     return null;
                 })}

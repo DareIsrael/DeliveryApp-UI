@@ -129,7 +129,7 @@ const Cart = ({ setShowLogin }) => {
     const isCartEmpty = Object.values(cartItems).every((quantity) => quantity === 0);
 
     return (
-        <div className='cart'>
+        <div className='cart' id='cart'>
             <div className='cart-items'>
                 <h1>Cart Items</h1>
 

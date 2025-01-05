@@ -14,6 +14,8 @@ const StoreContextProvider = (props) => {
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([])
     const [userId, setUserId] = useState(""); 
+    const [reviews, setReviews] = useState({});
+
     
 
 
@@ -57,7 +59,39 @@ const StoreContextProvider = (props) => {
         }
         return totalAmount;
     }
-
+      
+    // const fetchReviews = async (foodId) => {
+    //     try {
+    //         const response = await axios.get(`${url}/api/reviews/${foodId}`);
+    //         setReviews((prev) => ({ 
+    //             ...prev, 
+    //             [foodId]: response.data.reviews 
+    //         }));
+    //     } catch (error) {
+    //         console.error("Error fetching reviews:", error);
+    //     }
+    // };
+    
+    
+    // const addReview = async (foodId, review) => {
+    //     try {
+    //         const response = await axios.post(
+    //             `${url}/api/reviews/${foodId}`,
+    //             review,  // Send only the review data, not the entire reviews state
+    //             { headers: { Authorization: `Bearer ${token}` } }
+    //         );
+    //         setReviews((prev) => ({
+    //             ...prev,
+    //             [foodId]: [...(prev[foodId] || []), response.data.newReview] // Append the new review
+    //         }));
+    //     } catch (error) {
+    //         console.error("Error adding review:", error);
+    //     }
+    // };
+    
+    
+    
+    
     // const fetchFoodList = async () => {
     //     const response = await axios.get(url+"/api/food/list")
     //     setFoodList(response.data.data)
@@ -81,7 +115,7 @@ const StoreContextProvider = (props) => {
     
 
     const loadCartData = async (token) => {
-        const response = await axios.post(url+"/api/cart/get",{},{ headers: {
+        const response = await axios.post(url+"/api/cart/get", {}, { headers: {
         Authorization: `Bearer ${token}`
     } })
         setCartItems(response.data.cartData);
@@ -107,13 +141,15 @@ const StoreContextProvider = (props) => {
             if (storedToken) {
                 setToken(storedToken);
                 const decodedToken = jwtDecode(storedToken);
-                // console.log(decodedToken);
+                
                 setUserId(decodedToken.id); // Extract userId from decoded token
                 // setUserId(storedToken.id);
                 // await loadCartData(storedToken);
                 if (storedToken) {
                     await loadCartData(storedToken);
                 }
+                
+                
             }
             
         }
@@ -131,6 +167,9 @@ const StoreContextProvider = (props) => {
         addToCart,
         removeFromCart,
         getTotalCartAmount,
+        // reviews,
+        // fetchReviews,
+        // addReview,
         url,
         token,
         setToken,
