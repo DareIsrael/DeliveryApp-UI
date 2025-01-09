@@ -84,6 +84,8 @@ import SuccessLogin from './components/SuccessLogin/SuccessLogin';
 import ConfirmAccount from './components/ConfirmEmailLink/ConfirmAccount';
 import CookieConsent from 'react-cookie-consent';
 import ScrollToTop from './components/Scrolltop/ScrollToTop';
+import { Analytics } from '@vercel/analytics/react';
+
 
 
 const App = () => {
@@ -129,6 +131,7 @@ const App = () => {
       </div>
       
       <Footer />
+      <Analytics />
 
       {/* <CookieConsent
         location="bottom"
