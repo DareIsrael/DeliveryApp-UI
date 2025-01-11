@@ -44,10 +44,16 @@
 .explore-menu-list-wrapper {
   display: flex;
   justify-content: center;
-  animation: scroll 20s linear infinite;  /* Infinite scroll animation */
+  animation: scroll 18s linear infinite; /* Infinite scroll animation */
+  animation-play-state: running; /* Ensure animation runs initially */
   gap: 30px;
   padding-top: 30px;
 }
+
+.explore-menu-list-wrapper:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
 
 .explore-menu-list-item {
   display: inline-block;
