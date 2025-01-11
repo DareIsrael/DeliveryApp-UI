@@ -2,6 +2,9 @@
     margin-top: 30px;
     /* border: 1px solid #4B0082; */
     border-radius: 20px;
+    background-color: #F5F5F5;
+    /* background-color: #E6E6FA; */
+    
    
 }
 
@@ -16,9 +19,9 @@
 .food-display-list {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
-    margin-top: 30px;
+    margin-top: 100px;
     /* gap: 30px; */
-    row-gap: 50px;
+    row-gap: 20px
     
 }
 

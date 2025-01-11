@@ -199,7 +199,7 @@ const FoodItem = ({ id, name, price, initprice, discount, description, image }) 
             onClick={handleShow} // Trigger modal on image click
           />
            
-           <button className='add' >Buy Now</button> 
+           {/* <button className='add' >Buy Now</button>  */}
            {/* {!cartItems[id] ? (
               <button className='add'  
                  >Buy Now</button>  
@@ -274,17 +274,14 @@ const FoodItem = ({ id, name, price, initprice, discount, description, image }) 
           ) : (
             <div className='food-item-modal'>
            
-              <img 
+              <button className='remove_from_cart'
                 onClick={() => removeFromCart(id)}  // Pass the id to removeFromCart
-                src={assets.remove_icon_red} 
-                alt="Remove from cart" 
-              />
+                >-</button> 
               <p className='cart_quantity'>{cartItems[id]}</p>  {/* Display the quantity specific to this item */}
-              <img  
+              <button  className='remove_from_cart'
                 onClick={() => addToCart(id)}  // Pass the id to addToCart
-                src={assets.add_icon_green} 
-                alt="Add more to cart" 
-              />
+                
+                >+</button> 
               
             
             </div>
@@ -295,7 +292,8 @@ const FoodItem = ({ id, name, price, initprice, discount, description, image }) 
               
           ) : (
             <div className='cart_modal'>
-           <Link to='/cart' ><img src={assets.cart} /> </Link>
+           {/* <Link to='/cart' ><img src={assets.cart} /> </Link> */}
+           <Link to='/cart' ><p >🛒</p>  </Link>
 
             <div className="dot"></div>
            

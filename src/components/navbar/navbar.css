@@ -1,9 +1,12 @@
+
 .navbar {
     position: fixed !important;
     left: 0;
     right: 0;
     top: 0;
-    padding: 0 40px !important;
+    width: 100%;
+    box-shadow: 2px 5px 2px #49557e;
+    /* padding: 0 40px !important; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,20 +16,20 @@
     border-bottom-right-radius: 60px;
     margin-bottom: 100px;
     /* height: 50px !important; */
-
+  
   
     
-
+  
     
    
     
-
-}
-.navbar a {
+  
+  }
+  .navbar a {
     text-decoration: none;
     color: #4B0082;
-}
-@keyframes bounce {
+  }
+  @keyframes bounce {
     0%, 100% {
       transform: translateY(0);
     }
@@ -42,25 +45,26 @@
   }
   
   
-
-.navbar-menu {
+  
+  .navbar-menu {
     display:  flex;
     list-style: none; 
     gap: 20px;
     color: #49557e;
     font-size: 16px;
+    margin: 20px;
     
- }
-
-.navbar-right {
+  }
+  
+  .navbar-right {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-top: 10px;
+  margin: 0 40px;
   
-}
-
-.navbar button {
+  }
+  
+  .navbar button {
   background: transparent;
   font-size: 16px;
   color: white;
@@ -70,24 +74,33 @@
   cursor: pointer;
   transition: 0.3s;
   background-color: #4B0082;
-} 
-
-.navbar button:hover {
+  } 
+  
+  .navbar button:hover {
   background-color: silver;
   color: #4B0082;
-}
-.navbar .active {
+  }
+  .navbar .active {
     padding-bottom: 2px;
     border-bottom: 2px solid #49557e;
-}
-.navbar li {
+  }
+  .navbar li {
     cursor: pointer;
-}
-
-.navbar-search-icon {
+  }
+  
+  .navbar-cart {
     position: relative;
-}
-.navbar-search-icon .dot {
+    margin: 0;
+    gap: 0;
+  }
+
+  .navbar-cart h2 {
+    font-size: 40px;
+    margin: 0;
+    gap: 0;
+    
+  }
+  .navbar-cart .dot {
     position: absolute;
     min-width: 10px;
     min-height: 10px;
@@ -95,22 +108,25 @@
     border-radius: 5px;
     top: -8px;
     right: -8px;
-}
-
-
-
-.navbar-profile {
+  }
+  .nav_p {
+    color: #4B0082;
+    margin-top: 0;
+  }
+  
+  
+  .navbar-profile {
     position: relative;
     
-}
-
-.nav-profile-dropdown {
+  }
+  
+  .nav-profile-dropdown {
     position: absolute;
     display: none;
     right: 0;
     z-index: 1;
-}
-.navbar-profile:hover .nav-profile-dropdown {
+  }
+  .navbar-profile:hover .nav-profile-dropdown {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -120,27 +136,27 @@
     border: 1px solid tomato;
     outline: 2px solid white;
     list-style: none;
-}
-.nav-profile-dropdown li {
+  }
+  .nav-profile-dropdown li {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
-}
-.nav-profile-dropdown img {
+  }
+  .nav-profile-dropdown img {
     width: 20px;
-}
-
-.nav-profile-dropdown li:hover{
+  }
+  
+  .nav-profile-dropdown li:hover{
     color: tomato;
-}
-.hidden_home {
+  }
+  .hidden_home {
     display: none;
-}
-
-
-
-@media (max-width:1050px) {
+  }
+  
+  
+  
+  @media (max-width:1050px) {
     .navbar {
         position: fixed !important;
         left: 0;
@@ -166,6 +182,7 @@
     .hidden_home img {
         width: 90px !important;
        padding-left: 10px;
+       display: none;
     }
     .nav_p {
         position: absolute;
@@ -173,9 +190,9 @@
         right: 0;
         left: 18px;
         margin-bottom: 0;
-        
+        display: none;
         font-size: 26px !important;
-        font-family: Verdana, sans-serif;
+         
     }
     .navbar .logo {
         width: 300px;
@@ -185,12 +202,12 @@
         gap: 20px;
         font-size: 30px;
         display: none;
-
+  
     
         
     }
     .navbar-right {
-        gap: 30px;
+        gap: 40px;
         margin-right: 50px;
         margin-top: 12px;
     }
@@ -202,6 +219,7 @@
     .navbar-right button {
         padding: 15px 30px;
         font-size: 35px;
+        margin: 0 !important;
     }
     .navbar-profile img{
         width: 80px;
@@ -217,8 +235,8 @@
         cursor: pointer;
         font-size: 30px;
     }
-    .navbar-search-icon img{
-   width: 80px;
+    .navbar-cart h2{
+      font-size: 80px;
     }
     .nav-profile-dropdown img {
         width: 70px;
@@ -226,10 +244,10 @@
     .navbar-search-icon {
         margin-right: 40px;
     }
-}
-
-
-@media (max-width:900px) {
+  }
+  
+  
+  @media (max-width:900px) {
     .navbar .logo {
         width: 120px;
     }
@@ -247,4 +265,5 @@
         padding: 7px 20px;
         font-size: 15px;
     }
-}
+  }
+  
