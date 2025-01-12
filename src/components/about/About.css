@@ -1,7 +1,6 @@
 .about {
-    
   max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 100px;
   padding: 40px 20px;
   line-height: 1.6;
   font-family: 'Arial', sans-serif
@@ -10,8 +9,23 @@
 .about h2 {
     margin-bottom: 30px;
     font-weight: 600;
+    color: #6a1b9a;
 }
 
 .about p {
     margin-top: 40px;
+    color: gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 1050px) {
+  .about {
+    margin-top: 180px;
+  }
+  .about p {
+    font-size: 30px;
+  }
+  .about h2 {
+    font-size: 45px;
+  }
 }

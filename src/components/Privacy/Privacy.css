@@ -1,0 +1,75 @@
+.privacy-policy {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 120px;
+  }
+  
+  .privacy-policy .container {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .privacy-policy h1 {
+    font-weight: 600;
+    font-size: 30px;
+    color: #6a1b9a; 
+    margin-bottom: 40px;
+  }
+  .privacy-policy h2 {
+    color: #6a1b9a; /* Purple theme for ElectroVault */
+    margin-bottom: 10px;
+    font-size : 22px;
+    
+  }
+  
+  .privacy-policy p {
+    margin-bottom: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gray;
+  }
+  
+  .privacy-policy ul {
+    margin: 10px 0 20px 20px;
+    
+  }
+  
+  .privacy-policy ul li {
+    margin-bottom: 10px;
+    color: gray;
+    
+  }
+  
+  .privacy-policy a {
+    color: #6a1b9a;
+    text-decoration: underline;
+  }
+  
+  .privacy-policy a:hover {
+    color: #4a0072;
+  }
+  
+  @media (max-width: 1050px) {
+    .privacy-policy {
+        margin-top: 180px;
+    }
+
+    .privacy-policy h1 {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+  .privacy-policy h2  {
+    font-size: 35px;
+  }
+  .privacy-policy p {
+    font-size: 28px;
+    color: gray;
+  }
+  .privacy-policy ul li {
+    font-size: 28px;
+    color: gray;
+  }
+  }

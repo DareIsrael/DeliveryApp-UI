@@ -44,7 +44,7 @@
 .explore-menu-list-wrapper {
   display: flex;
   justify-content: center;
-  animation: scroll 18s linear infinite; /* Infinite scroll animation */
+  animation: scroll 16s linear infinite; /* Infinite scroll animation */
   animation-play-state: running; /* Ensure animation runs initially */
   gap: 30px;
   padding-top: 30px;

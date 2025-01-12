@@ -85,6 +85,9 @@ import ConfirmAccount from './components/ConfirmEmailLink/ConfirmAccount';
 import CookieConsent from 'react-cookie-consent';
 import ScrollToTop from './components/Scrolltop/ScrollToTop';
 import { Analytics } from '@vercel/analytics/react';
+import Privacy from './components/Privacy/Privacy';
+import Contact from './components/Contact/Contact';
+import FAQ from './components/FAQ/Faq';
 
 
 
@@ -127,6 +130,9 @@ const App = () => {
           <Route path="/confirm/:token" element={<ConfirmAccount />} />
           <Route path='/resetpassword/:id/:token' element={<ResetPassword setShowResetPassword={setShowResetPassword} setShowLogin={setShowLogin} />} />
           <Route path='/about' element={<About />} />
+          <Route path='/privacy' element={<Privacy />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/faq' element={<FAQ />} />
         </Routes>
       </div>
       
