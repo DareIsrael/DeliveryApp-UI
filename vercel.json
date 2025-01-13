@@ -1,8 +1,8 @@
 {
     "redirects": [
       {
-        "source": "https://myelectrovault.com/(.*)",
-        "destination": "https://www.myelectrovault.com/$1",
+        "source": "https://myelectrovault.com",
+        "destination": "https://www.myelectrovault.com",
         "permanent": true
       }
     ]
