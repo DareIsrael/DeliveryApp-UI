@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      {
+        "source": "https://myelectrovault.com/(.*)",
+        "destination": "https://www.myelectrovault.com/$1",
+        "permanent": true
+      }
+    ]
+  }
+  
