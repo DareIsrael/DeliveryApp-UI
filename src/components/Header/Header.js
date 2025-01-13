@@ -25,8 +25,9 @@ import './Header.css';
 const Header = () => {
   const contentItems = [
     "Shop premium electronics at competitive prices with daily deals and exclusive offers.",
-    "Upgrade your kitchen with top-quality appliances designed for convenience and style.",
+    "Shop premium electronics at competitive prices with daily deals and exclusive offers.",
     "Discover furniture that combines comfort, durability, and elegance for your home.",
+    "Upgrade your kitchen with top-quality appliances designed for convenience and style.",
     "Fast and secure delivery straight to your doorstep—shop with confidence today!"
   ];
 
