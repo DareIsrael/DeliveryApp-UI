@@ -138,6 +138,7 @@
 // };
 
 // export default FoodDisplay;
+
 import React, { useContext, useState, useEffect } from 'react';
 import './FoodDisplay.css';
 import { StoreContext } from '../../context/StoreContext';
@@ -169,6 +170,11 @@ const FoodDisplay = ({ category }) => {
             setQueryToSearch(""); // Set queryToSearch to empty to fetch all data
         }
     };
+    
+    const handleRefresh = () => {
+        window.location.reload();
+    };
+    
 
     return (
         <div className="food-display" id="food-display">
@@ -184,6 +190,11 @@ const FoodDisplay = ({ category }) => {
                     Search
                 </button>
             </div>
+            {/* refresh */}
+            <div>
+            <button className="search-button" onClick={handleRefresh}>All Products</button>
+            </div>
+            {/* refresh */}
 
             {/* Display 'No results found' when food_list is empty */}
             {food_list.length === 0 && queryToSearch && (

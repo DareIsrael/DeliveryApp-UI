@@ -235,10 +235,16 @@ const LoginPopUp = ({ setShowLogin, setSuccessLogin }) => {
               <input name='phoneNumber' onChange={onChangeHandler} value={data.phoneNumber} type='text' placeholder='Phone Number' required />
             </>
           )}
-          <input name='email' onChange={onChangeHandler} value={data.email} type='email' placeholder='Your email' required />
+          <div className="input-container">
+    <i className="fas fa-envelope"></i> 
+    <input  name="email" onChange={onChangeHandler} value={data.email} type="email" placeholder="Your email" required 
+    />
+</div>
           
           {/* Password input with eye icon */}
           <div className="password-input-wrapper">
+          <i class="fas fa-lock"></i>
+
             <input 
               name='password' 
               onChange={onChangeHandler} 
@@ -254,6 +260,7 @@ const LoginPopUp = ({ setShowLogin, setSuccessLogin }) => {
 
           {currState === "Login" ? null : (
             <div className="password-input-wrapper">
+            <i class="fas fa-lock"></i>
               <input 
                 name='passwordConfirm' 
                 onChange={onChangeHandler} 

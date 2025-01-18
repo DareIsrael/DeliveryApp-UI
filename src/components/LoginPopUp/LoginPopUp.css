@@ -20,6 +20,35 @@
     font-size: 14px;
     animation: fadeIn 0.5s;
   } 
+
+  .input-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-container i {
+    position: absolute;
+    left: 10px; /* Adjust the space between the icon and the left edge */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888; /* Set the color of the icon */
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding-left: 30px; /* Add padding to the left to create space for the icon */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-container input::placeholder {
+    color: #888; /* Color for the placeholder text */
+    padding-left: 20px   ;
+  }
+ 
+
   
   .login-popup {
     position: fixed; 
@@ -56,7 +85,7 @@
   .login-popup-inputs input {
     outline: none;
     border: 1px solid #c9c9c9;
-    padding: 10px;
+    padding-left: 30px;
     border-radius: 4px;
   }
   
@@ -101,6 +130,7 @@
 .password-input-wrapper {
     position: relative;
     width: 100%;
+    
   }
   
   /* The input field itself */
@@ -112,6 +142,7 @@
     padding: 10px;
     border-radius: 4px;
     box-sizing: border-box;
+    padding-left: 30px;
   }
   
   /* Eye icon positioning inside the input field */
@@ -124,6 +155,18 @@
     font-size: 1.2em;
     color: #808080;
   }
+  .password-input-wrapper i {
+    position: absolute;
+    left: 10px; /* Adjust the space between the icon and the left edge */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  .password-input-wrapper input::placeholder {
+    color: #888; /* Color for the placeholder text */
+    padding-left: 20px 
+  }
+  
   .no-decoration {
     text-decoration: none;
     color: #4B0082;
@@ -183,24 +226,44 @@
   /* Tablet devices */
   @media (max-width: 1050px) {
     .login-popup-container {
-      width: 70vw; /* Adjust container width for tablets */
-      padding: 30px; /* Adjust padding for tablets */
+      width: 85vw; /* Adjust container width for tablets */
+      
+      /* padding: 100px; Adjust padding for tablets */
     }
+  
   
     .login-popup-title img {
       width: 40px; /* Smaller close icon for tablets */
     }
+    .login-popup-title h2{
+   font-size: 50px;
+    }
   
     .login-popup-inputs input {
-      padding: 20px;
+      padding: 20px 60px;
       font-size: 38px; /* Adjusted for better readability */
     }
-  
+    .login-popup-inputs input::placeholder {
+      padding-left: 30px;
+    }
+    .password-input-wrapper i {
+      font-size: 33px;
+    }
+    .password-input-wrapper input::placeholder {
+      padding-left: 30px;
+    }
+
+    .login-popup-inputs i{
+      font-size: 33px;
+    }
     .login-popup-container button {
-      font-size: 30px;
+      font-size: 40px;
+      padding: 25px;
+      border-radius: 10px;
     }
     .login-popup p {
-      font-size: 30px;
+      font-size: 35px;
+      
     }
     .eye-icon {
       font-size: 35px !important;

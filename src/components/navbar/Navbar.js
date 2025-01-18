@@ -43,7 +43,7 @@ const Navbar = ({setShowLogin}) => {
        
         <p className='nav_p' >Cart</p>
     </div>
-    {!token?  <button onClick={()=> setShowLogin(true)}>sign in</button>
+    {!token?  <div><button className='signin_btn' onClick={()=> setShowLogin(true)}>sign in</button> <span  className='sign_in_user'   onClick={()=> setShowLogin(true)}> <i class="fa-regular fa-user"></i></span></div>
      : <div className='navbar-profile'>
       <img src={assets.profile_icon} />
       <p className='nav_p' >Account</p>
