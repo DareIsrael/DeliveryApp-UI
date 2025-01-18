@@ -1,5 +1,5 @@
 {
-    "redirects": [
+    "rewrites": [
       {
         "source": "https://myelectrovault.com",
         "destination": "https://www.myelectrovault.com",
