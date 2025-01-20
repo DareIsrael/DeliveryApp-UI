@@ -1,6 +1,6 @@
 .header {
     height: 38vw;
-    margin: 150px auto 10px;
+    margin: 100px auto 10px;
     background: url("https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover;
     position: relative;
     border-radius: 20px;
@@ -52,6 +52,10 @@
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
+.within {
+    font-size: 25px;
+    font-weight: 600;
+}
 @media (max-width: 1050px) {
     .header {
         margin-top: 170px;
@@ -73,6 +77,10 @@
     }
     .header-contents h2 {
         font-size: 33px;
+    }
+    .within {
+        font-size: 35px;
+        font-weight: 600;
     }
 }
 

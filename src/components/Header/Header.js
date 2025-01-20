@@ -47,7 +47,7 @@ const Header = () => {
         <h2>{contentItems[currentIndex]}</h2>
         <p>
           Get your orders delivered promptly and securely, straight to your door.
-          Whether online or in-store, we’re committed to providing an easy, hassle-free shopping journey.
+          <span className='within'>within 24 hours</span>, we’re committed to providing an easy, hassle-free shopping journey.
         </p>
         <a href='#food-item'>
           <button>View Products</button>

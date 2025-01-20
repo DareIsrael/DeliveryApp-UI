@@ -35,24 +35,26 @@
   margin-left: 20px;
 }
 
-.explore-menu-list {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
-
 .explore-menu-list-wrapper {
   display: flex;
   justify-content: center;
-  animation: scroll 16s linear infinite; /* Infinite scroll animation */
-  animation-play-state: running; /* Ensure animation runs initially */
-  gap: 30px;
   padding-top: 30px;
+  
+}
+
+.explore-menu-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 60px; 
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .explore-menu-list-wrapper:hover {
   animation-play-state: paused; /* Pause animation on hover */
 }
+
 
 
 .explore-menu-list-item {
@@ -100,7 +102,7 @@
   font-size: 22px;
   font-weight: 600;
 }
-
+/* 
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -108,7 +110,7 @@
   100% {
     transform: translateX(-100%);
   }
-}
+} */
 
 .explore-menu-list-wrapper::-webkit-scrollbar {
   display: none;
@@ -122,6 +124,19 @@
 }
 
 @media (max-width: 1050px) {
+  .explore-menu-list-wrapper {
+    align-items: center;
+    
+  }
+  .explore-menu-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    padding-bottom: 90px;
+  }
+  .explore-menu-list-item  {
+    margin: 30px 30px -90px;
+  }
   .explore-menu p {
     font-size: 26px;  /* Adjusted font size for better readability */
   }
