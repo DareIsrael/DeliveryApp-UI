@@ -196,6 +196,8 @@
     color: #555;
     font-size: 1rem;
     margin: 10px 10px;
+    line-height: 1.6; /* Improves readability */
+    text-align: justify; /* Aligns text properly */
    
   }
   
