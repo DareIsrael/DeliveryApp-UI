@@ -12,6 +12,7 @@ import washing from './washing.jpg'
 import air from './air.jpg'
 import iron from './iron.jpg'
 import generator from './generator.jpg'
+import utility from './utility.jpeg'
 // import menu2 from './menu2.jpeg'
 // import menu3 from './menu3.jpeg'
 // import menu4 from './menu4.jpeg'
@@ -107,7 +108,7 @@ export const menu_list = [
 
     },
     {
-        menu_name: "Center-Table",
+        menu_name: "TV-Console/Table",
         menu_image: table
 
     },
@@ -131,6 +132,11 @@ export const menu_list = [
         menu_image: generator
 
     },
+    {
+      menu_name: "Utility",
+      menu_image: utility
+
+  },
 
 ]
 
