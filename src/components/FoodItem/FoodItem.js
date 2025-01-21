@@ -254,7 +254,7 @@ const FoodItem = ({ id, name, price, initprice, discount, description, image }) 
               </button>
             </div>
             <div className="modal-body">
-              <img className="img-fluid custom-modal-img" src={image} alt={name} />  {/* Cloudinary URL */}
+              <img className="img-fluid custom-modal-img"  src={`${image}?v=${new Date().getTime()}`} alt={name} />  {/* Cloudinary URL */}
              
               <p>{name} <span className='brand_new'>Brand New</span></p>
               
