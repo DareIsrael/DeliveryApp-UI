@@ -60,7 +60,7 @@
 .explore-menu-list-item {
   display: inline-block;
   flex-shrink: 0;  /* Prevent shrinking */
-  margin: 0 10px;
+  margin: 0 10px -40px;
   width: 150px;
   text-align: center;
   cursor: pointer;  /* Ensure pointer cursor */
@@ -75,7 +75,7 @@
 }
 
 .explore-menu-list-item img {
-  max-width: 70%;
+  max-width: 50%;
   border-radius: 10%;
 }
 
