@@ -130,19 +130,19 @@
   }
   .explore-menu-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
-    padding-bottom: 90px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 120px;
   }
   .explore-menu-list-item  {
-    margin: 30px 30px -90px;
+    margin: 30px 30px -60px;
   }
   .explore-menu p {
     font-size: 26px;  /* Adjusted font size for better readability */
   }
 
   .explore-menu-list-item img {
-    max-width: 150px;
+    max-width: 120px;
     border-radius: 20px;
   }
 

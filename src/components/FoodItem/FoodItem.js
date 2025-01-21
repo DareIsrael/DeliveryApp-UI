@@ -192,12 +192,12 @@ const FoodItem = ({ id, name, price, initprice, discount, description, image }) 
     <>
       <div className='food-item' id='food-item'>
         <div onClick={handleShow} className='food-item-img-container'>
-          <img 
-            className='food-item-image' 
-            src={image}  // Cloudinary URL is used directly
-            alt={name}
-            onClick={handleShow} // Trigger modal on image click
-          />
+        <img 
+       className='food-item-image' 
+       src={`${image}?v=${new Date().getTime()}`}  // Append a timestamp to force refresh
+       alt={name}
+       onClick={handleShow} // Trigger modal on image click
+      />
            
            {/* <button className='add' >Buy Now</button>  */}
            {/* {!cartItems[id] ? (
