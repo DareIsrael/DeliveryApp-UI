@@ -130,6 +130,9 @@
     position: relative;
     
   }
+  .navbar-profile-img {
+    width: 40px;
+  }
   
   .nav-profile-dropdown {
     position: absolute;
@@ -236,6 +239,9 @@
         margin-bottom: 25px;
        
     }
+    .navbar-profile-img {
+       margin-bottom: -15px;
+    }
     .navbar-right button {
         padding: 15px 30px;
         font-size: 35px;
@@ -245,6 +251,7 @@
         width: 80px;
         margin-left: 16px;
     }
+    
     .nav-profile-dropdown {
         margin-top: 30px;
     }
