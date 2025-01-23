@@ -15,6 +15,7 @@ const StoreContextProvider = (props) => {
     const [food_list, setFoodList] = useState([])
     const [userId, setUserId] = useState(""); 
     const [reviews, setReviews] = useState({});
+    const [loading, setLoading] = useState(true);
 
     
 
@@ -105,7 +106,9 @@ const StoreContextProvider = (props) => {
                     category: category !== "All" ? category : undefined, // Avoid sending "All" as a category filter
                 },
             });
+            setLoading(false)
             setFoodList(response.data.data);
+            
         } catch (error) {
             console.error("Error fetching food list:", error);
         }
@@ -173,7 +176,9 @@ const StoreContextProvider = (props) => {
         url,
         token,
         setToken,
-        userId
+        userId,
+        loading,
+        setLoading
     };
 
     return (

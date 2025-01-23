@@ -70,7 +70,33 @@
     background-color: black;
 }
 
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust based on your layout */
+}
 
+.loading-logo {
+    width: 200px; /* Adjust size */
+    height: 100px;
+    animation: zoomInOut 1.5s ease-in-out infinite; /* Zoom effect */
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(0.8); /* Start small */
+        opacity: 0.5; /* Slightly transparent */
+    }
+    50% {
+        transform: scale(1.2); /* Zoom in */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: scale(0.8); /* Zoom out */
+        opacity: 0.5; /* Slightly transparent */
+    }
+}
 
 
 
@@ -87,6 +113,9 @@
      
     }
      
+    .loading-logo {
+        width: 350px;
+    }
 
     .search-bar input {
         padding: 20px 5px;

@@ -34,20 +34,9 @@
     height: 100%;
     object-fit: cover;
     border-bottom: 1px solid #e0e0e0;
-    animation: rotate-image 2s ease-in-out;
+    
   }
-  
-  @keyframes rotate-image {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
+
   
   .food-item-info {
     gap: 0;
