@@ -190,7 +190,7 @@ const FoodItem = ({ id, name, price, initprice, discount, description, image }) 
 
   return (
     <>
-      <div className='food-item' id='food-item'>
+      <div className='food-item' id='product-item'>
         <div onClick={handleShow} className='food-item-img-container'>
         <img 
        className='food-item-image' 
