@@ -179,6 +179,7 @@ const Verify = () => {
   const [searchParams] = useSearchParams();
   const success = searchParams.get("success");
   const orderId = searchParams.get("orderId");
+  
   const { url } = useContext(StoreContext);
   const navigate = useNavigate();
   const [message, setMessage] = useState("Verifying your payment...");
