@@ -121,7 +121,8 @@
 .footer {
     background-color: #4b0082; /* Deep purple */
     color: #ffffff;
-    padding: 40px 20px;
+    padding: 120px 20px;
+    margin-bottom: -200px;
   }
   
   .footer-container {
