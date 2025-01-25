@@ -155,11 +155,15 @@
   
   @media (max-width:1050px) {
       .cart {
-          margin-top: 170px;
+        
+          margin-top: 50px;
       }
       .cart-items {
           margin-bottom: 100px;
           margin-top: 250px;
+      }
+      .sub_total {
+        margin: 35px;
       }
       
       .cart-items-title p {
@@ -187,10 +191,12 @@
       font-size: 25px;
      }
      .cart-total button {
-      width: 100%;
-      padding: 20px 30px;
-      font-size: 20px;
-      margin-top: 15px;
+      width: 80%;
+      padding: 30px 30px;
+      font-size: 25px;
+      margin: 20px auto;
+      justify-content: center;
+      align-items: center;
      }
      .cart-promocode {
       font-size: 25px;

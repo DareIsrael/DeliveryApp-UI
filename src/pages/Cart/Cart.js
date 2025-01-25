@@ -175,7 +175,7 @@ const Cart = ({ setShowLogin }) => {
             <div className='cart-bottom'>
                 <div className='cart-total'>
                     <h2>Cart Totals</h2>
-                    <div>
+                    <div className='sub_total'>
                         <div className='cart-total-details'>
                             <p>Subtotal</p>
                             <p>₦ {getTotalCartAmount().toLocaleString()}</p>
