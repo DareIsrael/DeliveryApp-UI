@@ -27,7 +27,7 @@ const FAQ = () => {
     {
       question: "How long does delivery take?",
       answer:
-        "Delivery typically within 24hrs for people in Ilorin. but it may be more for the people outside Ilorin depending on your location. Expedited shipping options are also available at checkout.",
+        "Delivery typically takes within 24hrs for people in Ilorin. but it may be more for the people outside Ilorin depending on your location. Expedited shipping options are also available at checkout.",
     },
     {
       question: "What is your return policy?",
