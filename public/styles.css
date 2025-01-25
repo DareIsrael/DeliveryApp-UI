@@ -1,3 +1,11 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
 @media (max-width: 1050px) {
     #chat-application-iframe {
         width: 500px !important;

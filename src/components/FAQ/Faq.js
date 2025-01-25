@@ -10,9 +10,9 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "What is ElectroVault?",
+      question: "What is myElectroVault?",
       answer:
-        "ElectroVault is your one-stop shop for all your electronic needs, offering a wide range of high-quality gadgets, appliances, and accessories at competitive prices.",
+        "myElectroVault is your one-stop shop for all your electronic needs, offering a wide range of high-quality gadgets, appliances, and accessories at competitive prices.",
     },
     {
       question: "How do I place an order?",
@@ -27,12 +27,12 @@ const FAQ = () => {
     {
       question: "How long does delivery take?",
       answer:
-        "Delivery typically takes 3–7 business days, depending on your location. Expedited shipping options are also available at checkout.",
+        "Delivery typically within 24hrs for people in Ilorin. but it may be more for the people outside Ilorin depending on your location. Expedited shipping options are also available at checkout.",
     },
     {
       question: "What is your return policy?",
       answer:
-        "You can return items within 14 days of delivery as long as they are in their original condition and packaging. Please refer to our Return Policy page for detailed instructions.",
+        "You can return items within 3 days of delivery as long as they are in their original condition and packaging.",
     },
     {
       question: "How can I contact customer support?",
