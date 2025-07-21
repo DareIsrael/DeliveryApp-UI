@@ -6,7 +6,7 @@ const About = () => {
     <div className='about' >
       <h2>About Us</h2>
       <p>
-          Welcome to myElectroVault, your trusted partner for top-quality home appliances and entertainment solutions.
+          Welcome to myElectroVault, your trusted partner for top quality home appliances and entertainment solutions.
          Our mission is to bring innovation, style, and convenience to every home, offering a carefully curated selection of Smart TVs,
            TV consoles, sound systems, cookers, fans, and other essential household appliances.
           We understand the importance of reliable, high-performing products that elevate your living experience. 
